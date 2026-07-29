@@ -1,5 +1,12 @@
 # FlexLogger Community Plug-ins
 
+<!-- labview-ci:dashboard -->
+## LabVIEW CI
+
+[![LabVIEW CI dashboard](https://img.shields.io/badge/LabVIEW%20CI-dashboard-2ea44f)](https://mipetrov-ni.github.io/niflexlogger-plugins/)
+
+LabVIEW CI runs on every pull request. See the [**CI dashboard**](https://mipetrov-ni.github.io/niflexlogger-plugins/) for build status, VI Analyzer results, VI diffs, and mass-compile reports.
+
 Welcome to the FlexLogger Community Plug-ins repository! This repository serves as a hub for sharing and discovering FlexLogger plug-ins contributed by the community. FlexLogger is a powerful tool for data acquisition and analysis, and this repository aims to extend its capabilities by providing additional functionality through user-contributed plug-ins.
 
 ## Features
