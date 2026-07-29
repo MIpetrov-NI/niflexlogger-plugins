@@ -1,0 +1,400 @@
+{
+  "schema": 1,
+  "repo": "MIpetrov-NI/niflexlogger-plugins",
+  "sha": "5157341c1461717c7f7d072c8971d26479f39d47",
+  "revisions": [
+    {
+      "sha": "5157341c1461717c7f7d072c8971d26479f39d47",
+      "short": "5157341",
+      "message": "Add LabVIEW CI pipeline",
+      "author": "MIpetrov-NI",
+      "date": "2026-07-29T20:48:33Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "842f11f57319d2b99d2cb932253b22693ea38582",
+      "short": "842f11f",
+      "message": "Add Tone Measurements Plugin (#28)",
+      "author": "Doug Bendele",
+      "date": "2026-07-02T20:01:56Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "cedd13d18d390b5ecd464a6dc19db262d3e9eec6",
+      "short": "cedd13d",
+      "message": "[DFT Plugin] [DOC Only] Update README by adding interactive features included with DFT plugin modal view (#30)",
+      "author": "Doug Bendele",
+      "date": "2026-07-02T17:12:34Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "ab13f856cd03fac9e3685633b6fbbee26314c61e",
+      "short": "ab13f85",
+      "message": "[Tachometer Processing] Fix #26 by adding state to class data (#27)",
+      "author": "Doug Bendele",
+      "date": "2026-05-21T21:20:41Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "31562ee2bd41693c60d845db3e1883f55601c31c",
+      "short": "31562ee",
+      "message": "Update README with image and PDK version",
+      "author": "DevinKoopmans",
+      "date": "2026-05-11T15:26:05Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "80342ffab5f8705709e53a50a5c68c2bfe394664",
+      "short": "80342ff",
+      "message": "Add new plugin for DFT-spectra viewing based on SVT API (#24)",
+      "author": "Doug Bendele",
+      "date": "2026-05-09T00:13:05Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "fcdf1b96558fed05c154bf8b58162b34653d4a74",
+      "short": "fcdf1b9",
+      "message": "Add required software section to README",
+      "author": "DevinKoopmans",
+      "date": "2026-01-14T18:41:54Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "3206ff3b614a958e3ee067e0d1a1e8ec099dd118",
+      "short": "3206ff3",
+      "message": "Add new Output Sequencer plug-in. (#22)",
+      "author": "DevinKoopmans",
+      "date": "2026-01-14T18:34:59Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "e878a3f5844fd49a84e0715de8f04312dd4d970c",
+      "short": "e878a3f",
+      "message": "Add Analog Tachometer Process plug-in. (#17)",
+      "author": "jlangston-NI",
+      "date": "2026-01-14T17:03:06Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "818ca78863d3a467554178a4a14dfdcf1726b5ba",
+      "short": "818ca78",
+      "message": "Add new Power Spectrum Density plug-in. (#20)",
+      "author": "Christophe Caltagirone",
+      "date": "2025-12-16T05:08:41Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "217290bf5cd988b79f4598e5961e3d00b442ad40",
+      "short": "217290b",
+      "message": "Add ReadMe for Output Sequencer (#21)",
+      "author": "DevinKoopmans",
+      "date": "2025-12-15T22:07:30Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "5f01b04b2cec924c2927461288dde045ab02fb34",
+      "short": "5f01b04",
+      "message": "Merge pull request #13 from ni/users/ccaltagi/move-plug-ins-to-pdk-plug-ins-folder",
+      "author": "Christophe Caltagirone",
+      "date": "2025-12-14T15:29:48Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "b3c3bbe7318e571f508decf5af46a9bd21547e70",
+      "short": "b3c3bbe",
+      "message": "Merge with origin/main.",
+      "author": "Christophe Caltagirone",
+      "date": "2025-12-14T15:27:07Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "2cc13f8394dff2a3b8d40b708a2b2b733da23feb",
+      "short": "2cc13f8",
+      "message": "Updated steps to describe fork-and-pull model. (#18)",
+      "author": "jlangston-NI",
+      "date": "2025-09-15T20:17:36Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "f8be0ec617e3134024a0aa50b1a05fefca1a1977",
+      "short": "f8be0ec",
+      "message": "Update plugins folder > PDK plugins",
+      "author": "Christophe Caltagirone",
+      "date": "2025-07-18T14:14:32Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "b5b3a7160fea1bb03a6ca169b6b7cd35ead82465",
+      "short": "b5b3a71",
+      "message": "Move the PDK plug-ins to a new PDK plugins folder.",
+      "author": "Christophe Caltagirone",
+      "date": "2025-07-17T16:45:15Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "8598080bd929be4246ad768b815e0e65c42cddcc",
+      "short": "8598080",
+      "message": "Add Sequencer Plugin",
+      "author": "Brad Buchanan",
+      "date": "2024-12-14T20:50:37Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "f98e97553b79a58b9de4bb1b4e6be96b8acbb7bd",
+      "short": "f98e975",
+      "message": "Fixed multiple instances issue and updated README",
+      "author": "Brad Buchanan",
+      "date": "2024-12-14T17:08:19Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "8bd8320106f9c6c4fbff44b31a36d75ad0e4a57a",
+      "short": "8bd8320",
+      "message": "Use Tree for UI instead",
+      "author": "Brad Buchanan",
+      "date": "2024-12-12T06:02:31Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "585a82f0016d6660401e0a6220576ea4c1de8acf",
+      "short": "585a82f",
+      "message": "Initial commit",
+      "author": "Brad Buchanan",
+      "date": "2024-12-10T19:52:16Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "a52a07945ce1dee5fdcfae821fc61e8248d23d73",
+      "short": "a52a079",
+      "message": "Add Historical Table Plugin",
+      "author": "Brad Buchanan",
+      "date": "2024-11-22T03:08:16Z",
+      "project": true,
+      "dep_only": false
+    },
+    {
+      "sha": "3030ece0da8d995db5811a38af3d904e3c0f3127",
+      "short": "3030ece",
+      "message": "Initial commit",
+      "author": "Christophe Caltagirone",
+      "date": "2024-08-22T12:42:36Z",
+      "project": true,
+      "dep_only": false
+    }
+  ],
+  "config": {
+    "use": "",
+    "actions": {},
+    "vipc": [],
+    "dragon": [],
+    "hasVipcList": false,
+    "hasDragonList": false
+  },
+  "vipc": [
+    {
+      "path": ".github/labview/vipm/ci-tooling.vipc",
+      "role": "core",
+      "capability": "",
+      "tooling": true,
+      "configured": true,
+      "monitored": true,
+      "monitorOn": [
+        "windows",
+        "linux"
+      ],
+      "locked": true,
+      "packages": [
+        "astemes_lib_lunit-2.0.13.6",
+        "astemes_lib_lunit_cli-1.6.1.23",
+        "astemes_lib_lunit_coverage_analysis_add_on-1.0.0.2",
+        "astemes_lib_lunit_global_fixture_add_on-1.0.5.4",
+        "astemes_lib_lunit_parameterized_add_on-1.1.10.8",
+        "astemes_lib_lunit_test_inheritance_add_on-1.0.5.4",
+        "dataflow_g_lib_g_image-0.5.0.1",
+        "felipefoz_lib_lv_rainbow_terminal-1.1.1.5",
+        "jki_lib_caraya-1.4.4.148",
+        "jki_lib_state_machine-2024.0.3.23",
+        "jki_rsc_toolkits_palette-1.1-1",
+        "labview_open_source_lib_epoch_datetime-1.3.0.8",
+        "labview_open_source_project_lib_labview_open_source_palette-1.0.2.7",
+        "labview_open_source_project_lib_openuri-1.4.0.13",
+        "lvos_lib_caraya_cli_extension-2.0.0.7",
+        "ni_lib_junit_results_api-1.0.1.6",
+        "ni_lib_simple_xml-1.0.0.4",
+        "ni_lib_utf_junit_report-1.0.1.43",
+        "oglib_array-6.0.1.20",
+        "oglib_error-6.0.0.26",
+        "oglib_file-6.0.2.28",
+        "oglib_lvdata-6.0.0.45",
+        "oglib_string-6.0.2.35",
+        "pnr_lib_caraya_junit_for_azure_pipelines-1.2.0.11",
+        "pnr_lib_junit_xml-1.0.0.4",
+        "sas_workshops_lib_lunit_for_g_cli-1.2.1.85",
+        "wiresmith_technology_lib_g_cli-3.0.1.98"
+      ],
+      "error": ""
+    }
+  ],
+  "nipm": [
+    {
+      "name": "LabVIEW",
+      "source": "NI Package Manager",
+      "labview": true,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "details": "LabVIEW runtime and development packages from the NI feeds."
+    },
+    {
+      "name": "VI Analyzer support",
+      "source": "NI Package Manager",
+      "packages": {
+        "windows": [
+          "ni-viawin-labview-support"
+        ],
+        "linux": [
+          "ni-vialin-labview-support"
+        ]
+      },
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "details": "NI VI Analyzer support package used by the analyzer runners."
+    },
+    {
+      "name": "NI Unit Test Framework",
+      "source": "NI Package Manager",
+      "packages": {
+        "windows": [
+          "ni-utf-labview-support"
+        ]
+      },
+      "platforms": [
+        "windows"
+      ],
+      "details": "NI UTF support package used by the Windows unit-test runner."
+    },
+    {
+      "name": "JKI Dragon",
+      "source": "NI Package Manager",
+      "packages": {
+        "windows": [
+          "jki-dragon"
+        ]
+      },
+      "platforms": [
+        "windows"
+      ],
+      "details": "JKI Dragon dependency-management tooling installed from the LabVIEW 2026 NI Package Manager feed."
+    },
+    {
+      "name": "VI Package Manager",
+      "source": "NI Package Manager",
+      "packages": {
+        "windows": [
+          "ni-vipm"
+        ]
+      },
+      "platforms": [
+        "windows"
+      ],
+      "details": "NI-published Windows VIPM package that enables VIPC application during worker builds. Linux installs VIPM from the native Debian package during its worker build."
+    }
+  ],
+  "dragon": {
+    "available": false,
+    "column": "windows",
+    "ready": false,
+    "health": "",
+    "manifest_version": "",
+    "files": [],
+    "install_set": [],
+    "conflicts": []
+  },
+  "system": [
+    {
+      "name": "VI Browser 2.0 toimages runner",
+      "source": "Repository Go code",
+      "path": ".github/labview/toimages/main.go",
+      "details": "Batch runner compiled from repo Go source; Linux uses the toimages GHCR image and Windows builds runner.exe in the workflow.",
+      "platforms": {
+        "windows": {
+          "present": true,
+          "label": "workflow-built"
+        },
+        "linux": {
+          "present": true,
+          "label": "toimages image"
+        }
+      }
+    },
+    {
+      "name": "lvctl render engine",
+      "source": "Repository Go code + embedded VIs",
+      "path": ".github/labview/toimages/_ni/labview/lvctl",
+      "details": "Renderer used by VI Browser 2.0 to drive LabVIEW and emit position-aware frame JSON.",
+      "platforms": {
+        "windows": {
+          "present": true,
+          "label": "workflow-built"
+        },
+        "linux": {
+          "present": true,
+          "label": "toimages image"
+        }
+      }
+    }
+  ],
+  "columns": [
+    {
+      "key": "windows",
+      "label": "Windows",
+      "platform": "windows",
+      "defaultTag": "latest",
+      "tag": "latest",
+      "ready": false,
+      "packages": [],
+      "failed_packages": [],
+      "nipkg_ready": false,
+      "nipkg_packages": [],
+      "labview_version": "",
+      "version": "latest"
+    },
+    {
+      "key": "linux",
+      "label": "Linux",
+      "platform": "linux",
+      "defaultTag": "latest",
+      "tag": "latest",
+      "ready": false,
+      "packages": [],
+      "failed_packages": [],
+      "nipkg_ready": false,
+      "nipkg_packages": [],
+      "labview_version": "",
+      "version": "latest"
+    }
+  ]
+}
