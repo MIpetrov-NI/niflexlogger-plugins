@@ -1,0 +1,21 @@
+{
+  "schema": 2,
+  "platform": "windows",
+  "version": "win-3c2bd0afb358",
+  "labview_version": "2026",
+  "base_image": "ghcr.io/elijah286/labview-ci-with-containers-labview-base:2026",
+  "base_digest": "sha256:5ca79385260dd195e31b1582607b2e0916bf41248bd431379af893b84af1d476",
+  "seed_image": "ghcr.io/elijah286/labview-ci-with-containers-labview-base:2026",
+  "seed_digest": "sha256:5ca79385260dd195e31b1582607b2e0916bf41248bd431379af893b84af1d476",
+  "worker_layer": "seed-only-copy",
+  "copied_from_base": true,
+  "image_ref": "ghcr.io/mipetrov-ni/niflexlogger-plugins-labview:win-3c2bd0afb358",
+  "build_date": "2026-07-29T20:48:52Z",
+  "git_sha": "5157341c1461717c7f7d072c8971d26479f39d47",
+  "run_url": "https://github.com/MIpetrov-NI/niflexlogger-plugins/actions/runs/30489901788",
+  "vipc": [],
+  "vipm_raw": "",
+  "vipm_packages": [],
+  "nipkg_raw": "",
+  "nipkg_packages": []
+}
