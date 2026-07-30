@@ -1,0 +1,227 @@
+{
+    "repo":  "MIpetrov-NI/niflexlogger-plugins",
+    "sha":  "65bcdbc2b63aaab8a344a5a12e748a341e95f6b3",
+    "ref":  "refs/pull/2/merge",
+    "platform":  "windows",
+    "arch":  "AMD64",
+    "labview_version":  "LabVIEW 2026",
+    "built_at":  "2026-07-30T02:30:35Z",
+    "specs":  [
+                  {
+                      "project":  "PDK plugins\\Analog Tachometer Process\\source\\Analog Tachometer Process\\Analog Tachometer Process.lvproj",
+                      "name":  "Analog Tachometer Process Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  35.3
+                  },
+                  {
+                      "project":  "PDK plugins\\CSV Export\\source\\CSV Export\\CSV Export.lvproj",
+                      "name":  "CSV Export Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  9
+                  },
+                  {
+                      "project":  "PDK plugins\\DateTimeChannel\\source\\DateTimeChannel\\DateTimeChannel.lvproj",
+                      "name":  "DateTimeChannel Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  3.8
+                  },
+                  {
+                      "project":  "PDK plugins\\DFT_Spectra\\source\\DFT_Spectra.lvproj",
+                      "name":  "DFT_Spectra Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  8.3
+                  },
+                  {
+                      "project":  "PDK plugins\\Digital Output Handler\\source\\Digital Output Handler\\Digital Output Handler.lvproj",
+                      "name":  "Digital Output Handler Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  3.7
+                  },
+                  {
+                      "project":  "PDK plugins\\Dynamic Channel\\source\\Dynamic Channel\\Dynamic Channel.lvproj",
+                      "name":  "Dynamic Channel Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  3.7
+                  },
+                  {
+                      "project":  "PDK plugins\\FFT\\source\\FFT.lvproj",
+                      "name":  "FFT Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  4.9
+                  },
+                  {
+                      "project":  "PDK plugins\\Historical Table\\source\\Historical Table\\Historical Table.lvproj",
+                      "name":  "Historical Table Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  3.8
+                  },
+                  {
+                      "project":  "PDK plugins\\Mystery Visa Device Channel Config\\source\\Configure Visa Device Channels.lvproj",
+                      "name":  "Configure Visa Device Channels Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  3.7
+                  },
+                  {
+                      "project":  "PDK plugins\\Output Sequencer\\source\\Output Sequencer - FlexLogger 2024-2025.lvproj",
+                      "name":  "Output Sequencer Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  13.4
+                  },
+                  {
+                      "project":  "PDK plugins\\Output Sequencer\\source\\Output Sequencer.lvproj",
+                      "name":  "Output Sequencer Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  10.8
+                  },
+                  {
+                      "project":  "PDK plugins\\Power Spectrum Density\\source\\Power Spectrum Density.lvproj",
+                      "name":  "Power Spectrum Density Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  5.9
+                  },
+                  {
+                      "project":  "PDK plugins\\Sequencer with Output Values - Deprecated\\source\\Sequencer with Output Values\\Sequencer with Output Values.lvproj",
+                      "name":  "Sequencer with Output Values Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  8.8
+                  },
+                  {
+                      "project":  "PDK plugins\\Spectrogram\\source\\Spectrogram.lvproj",
+                      "name":  "Spectrogram Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  5
+                  },
+                  {
+                      "project":  "PDK plugins\\StreamReader\\source\\StreamReader\\StreamReader.lvproj",
+                      "name":  "StreamReader Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  4.2
+                  },
+                  {
+                      "project":  "PDK plugins\\StreamWriter\\source\\StreamWriter\\StreamWriter.lvproj",
+                      "name":  "StreamWriter Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  3.8
+                  },
+                  {
+                      "project":  "PDK plugins\\Tone Measurements\\source\\Tone Measurements.lvproj",
+                      "name":  "Tone Measurements Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  5.6
+                  },
+                  {
+                      "project":  "PDK plugins\\Waterfall\\source\\Waterfall.lvproj",
+                      "name":  "Waterfall Packed Library",
+                      "type":  "Packed Library",
+                      "target":  "My Computer",
+                      "status":  "failed",
+                      "outputs":  [
+
+                                  ],
+                      "message":  "ExecuteBuildSpec exited 2",
+                      "duration":  22
+                  }
+              ]
+}
