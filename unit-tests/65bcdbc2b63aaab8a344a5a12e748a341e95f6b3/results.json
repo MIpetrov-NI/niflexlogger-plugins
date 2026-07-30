@@ -1,0 +1,71 @@
+{
+ "meta": {
+  "sha": "65bcdbc2b63aaab8a344a5a12e748a341e95f6b3",
+  "short": "65bcdbc",
+  "platform": "windows",
+  "repo": "MIpetrov-NI/niflexlogger-plugins",
+  "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins",
+  "snap_base": "https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/",
+  "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/",
+  "labview_version": "2026",
+  "tools": [],
+  "commit": {
+   "message": "Merge becb1a7254be7167edc57b39fc1cd47a1f19ee1a into 5157341c1461717c7f7d072c8971d26479f39d47",
+   "author": "MIpetrov-NI",
+   "date": "2026-07-29T21:13:32-05:00"
+  },
+  "generated_utc": "2026-07-30 02:28 UTC"
+ },
+ "summary": {
+  "tests": 0,
+  "passed": 0,
+  "failed": 0,
+  "errored": 0,
+  "skipped": 0,
+  "percent": 0,
+  "status": "empty",
+  "duration": 0.0
+ },
+ "status_order": [
+  "failed",
+  "error",
+  "skipped",
+  "passed"
+ ],
+ "status_meta": {
+  "failed": {
+   "label": "Failed",
+   "color": "#da3633",
+   "blurb": "An assertion failed."
+  },
+  "error": {
+   "label": "Errored",
+   "color": "#bb8009",
+   "blurb": "The test raised an unexpected error."
+  },
+  "skipped": {
+   "label": "Skipped",
+   "color": "#6e7681",
+   "blurb": "The test was skipped."
+  },
+  "passed": {
+   "label": "Passed",
+   "color": "#2ea043",
+   "blurb": "The test passed."
+  }
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": "linux/results.json"
+  }
+ ],
+ "suites": [],
+ "tooling": {
+  "missing": []
+ }
+}
