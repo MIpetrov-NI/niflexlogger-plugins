@@ -1,7 +1,7 @@
 {
-  "version": "linux-faa4596c3848",
+  "version": "linux-4ce478ba9bb6",
   "platform": "linux",
-  "manifest_url": "https://mipetrov-ni.github.io/niflexlogger-plugins/workers/linux/linux-faa4596c3848/manifest.html",
-  "build_date": "2026-08-01T06:22:58Z",
-  "git_sha": "5157341c1461717c7f7d072c8971d26479f39d47"
+  "manifest_url": "https://mipetrov-ni.github.io/niflexlogger-plugins/workers/linux/linux-4ce478ba9bb6/manifest.html",
+  "build_date": "2026-09-01T09:03:57Z",
+  "git_sha": "e536c0e23e7aeae1c560feb44701820f25d449db"
 }
