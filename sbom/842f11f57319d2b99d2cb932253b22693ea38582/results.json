@@ -1,0 +1,47 @@
+{
+ "meta": {
+  "sha": "842f11f57319d2b99d2cb932253b22693ea38582",
+  "short": "842f11f",
+  "platform": "windows",
+  "repo": "MIpetrov-NI/niflexlogger-plugins",
+  "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins",
+  "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/",
+  "labview_version": "2026",
+  "commit": {
+   "message": "Add Tone Measurements Plugin (#28)",
+   "author": "Doug Bendele",
+   "date": "2026-07-02T15:01:56-05:00"
+  },
+  "generated_utc": "2026-09-17 19:23 UTC",
+  "spdx_version": "CycloneDX 1.5",
+  "created": ""
+ },
+ "summary": {
+  "total_packages": 2
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": null
+  }
+ ],
+ "packages": [
+  {
+   "name": "ni-labview-2026-coreother",
+   "version": "26.1.2.49158-0+f6",
+   "vendor": "National Instruments"
+  },
+  {
+   "name": "ni-labview-2026-vilib",
+   "version": "26.1.2.49158-0+f6",
+   "vendor": "National Instruments"
+  }
+ ],
+ "tooling": {
+  "missing": []
+ }
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:nipkg/ni-labview-2026-coreother@26.1.2.49158-0%2Bf6",
+      "description": "This is an infrastructure package for NI Software.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.ni.com"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "c3519ca9486bc55c841c01ba943beef7"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "bbb9f80aa42112fef53cc94c52537ca1fb0101e521a3b9f12a4640fbb0ccd6b3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "NI Software License Agreement for Released Products"
+          }
+        }
+      ],
+      "name": "ni-labview-2026-coreother",
+      "properties": [
+        {
+          "name": "vipm:display-name",
+          "value": "NI LabVIEW (64-bit) Core Files"
+        },
+        {
+          "name": "vipm:display-version",
+          "value": "2026 Q1 Patch 2"
+        }
+      ],
+      "purl": "pkg:nipkg/ni-labview-2026-coreother@26.1.2.49158-0%2Bf6",
+      "supplier": {
+        "contact": [
+          {
+            "email": "support@ni.com"
+          }
+        ],
+        "name": "National Instruments"
+      },
+      "type": "library",
+      "version": "26.1.2.49158-0+f6"
+    },
+    {
+      "bom-ref": "pkg:nipkg/ni-labview-2026-vilib@26.1.2.49158-0%2Bf6",
+      "description": "This is an infrastructure package for NI Software.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.ni.com"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "5c7cd3b5403dbb26312088324a8af5da"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "b8182406b0c40fd045262f1938c5c355bd846896be033c1b2bd8af5c0a53184a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "NI Software License Agreement for Released Products"
+          }
+        }
+      ],
+      "name": "ni-labview-2026-vilib",
+      "properties": [
+        {
+          "name": "vipm:display-name",
+          "value": "NI LabVIEW (64-bit) VI Library"
+        },
+        {
+          "name": "vipm:display-version",
+          "value": "2026 Q1 Patch 2"
+        }
+      ],
+      "purl": "pkg:nipkg/ni-labview-2026-vilib@26.1.2.49158-0%2Bf6",
+      "supplier": {
+        "contact": [
+          {
+            "email": "support@ni.com"
+          }
+        ],
+        "name": "National Instruments"
+      },
+      "type": "library",
+      "version": "26.1.2.49158-0+f6"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:nipkg/ni-labview-2026-coreother@26.1.2.49158-0%2Bf6",
+        "pkg:nipkg/ni-labview-2026-vilib@26.1.2.49158-0%2Bf6"
+      ],
+      "ref": "pkg:vipm/Analog-Tachometer-Process"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "pkg:vipm/Analog-Tachometer-Process",
+      "name": "Analog Tachometer Process",
+      "type": "application"
+    },
+    "timestamp": "2026-09-17T19:23:05.049Z",
+    "tools": {
+      "components": [
+        {
+          "name": "vipm-cli",
+          "publisher": "JKI",
+          "type": "application",
+          "version": "2026.3.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:d3f6e5c5-3b3e-4f0d-ab42-a976fda7f447",
+  "specVersion": "1.5",
+  "version": 1
+}
