@@ -195,6 +195,10 @@ def enrich(sbom_path: Path, project: Path, labview_bin: Path) -> int:
     matched: dict[str, list[str]] = {}
     for owned_path, source_paths in ownership_paths.items():
         packages = owners.get(str(owned_path), set())
+        print(
+            f"  dpkg ownership: {owned_path} -> "
+            f"{', '.join(sorted(packages)) if packages else '(unowned)'}"
+        )
         if owned_path == floors[owned_path] and len(packages) > 1:
             print(
                 f"WARNING: Skipping ambiguous package ownership for token root {owned_path}: "
@@ -275,12 +279,14 @@ def enrich(sbom_path: Path, project: Path, labview_bin: Path) -> int:
         }
     )
 
+    output_mode = sbom_path.stat().st_mode & 0o777
     with tempfile.NamedTemporaryFile(
         "w", encoding="utf-8", dir=sbom_path.parent, delete=False
     ) as output:
         json.dump(document, output, indent=2, ensure_ascii=False)
         output.write("\n")
         temp_name = output.name
+    os.chmod(temp_name, output_mode)
     os.replace(temp_name, sbom_path)
     print(f"Linux dpkg enrichment added {len(added_refs)} project package component(s).")
     return len(added_refs)
