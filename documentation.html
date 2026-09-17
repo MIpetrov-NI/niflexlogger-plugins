@@ -1921,7 +1921,7 @@ docker exec &lt;name&gt; powershell -File C:\ops\render-snapshots.ps1 ...   # pe
         <code>dpkg-query -S</code> to map
         referenced installed paths to their owning Debian packages. It then reads package metadata with
         <code>dpkg-query -W</code> and appends <code>pkg:deb</code> CycloneDX components and root dependency edges.
-        Each added component carries <code>lvci:discovery-source=dpkg-query</code>, its matched project paths, and
+        Each added component carries <code>lvci:discovery-source=dpkg-query</code>, its matched installed paths, and
         the document records <code>dpkg-query</code> in <code>metadata.tools</code>. This is deliberately scoped to
         project references rather than copying the worker&rsquo;s entire installed package inventory. Linux package
         names and versions can differ from their corresponding Windows NIPM components.</p>
