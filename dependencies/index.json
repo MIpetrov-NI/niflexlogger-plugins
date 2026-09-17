@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "f871f010f2e5df9cfcd5a54bc5ad05b8c779f959",
+  "sha": "5041b9bca0474116d545a4e01e60b8c7c5018881",
   "revisions": [
+    {
+      "sha": "5041b9bca0474116d545a4e01e60b8c7c5018881",
+      "short": "5041b9b",
+      "message": "Merge pull request #6 from MIpetrov-NI/test/linux-sbom-dpkg",
+      "author": "Milena",
+      "date": "2026-09-17T21:57:53Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "4edf262e7f229046594e6ab79b73244a48d11a4e",
+      "short": "4edf262",
+      "message": "Test Linux SBOM package discovery",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-17T21:57:31Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "f871f010f2e5df9cfcd5a54bc5ad05b8c779f959",
       "short": "f871f01",
