@@ -5,8 +5,8 @@ installedVersion: 4.18.2
 installedAt: 2026-09-17T17:20:49Z
 provider: github
 source:
-  repo: elijah286/LabVIEW-CI-with-Containers
-  ref: v4.18.2
+  repo: MIpetrov-NI/LabVIEW-CI-with-Containers
+  ref: feature/sbom-dashboard-integration
   distribution:
     host: github
     repo: elijah286/LabVIEW-CI-with-Containers
@@ -26,3 +26,4 @@ activities:
   - snapshots-2
   - unit-tests
   - builds
+  - sbom-generation
