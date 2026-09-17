@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "6ce5ddb48e518548993bb7ee5d66a049485412ae",
+  "sha": "f871f010f2e5df9cfcd5a54bc5ad05b8c779f959",
   "revisions": [
+    {
+      "sha": "f871f010f2e5df9cfcd5a54bc5ad05b8c779f959",
+      "short": "f871f01",
+      "message": "Merge pull request #5 from MIpetrov-NI/test/linux-sbom-scope-banner",
+      "author": "Milena",
+      "date": "2026-09-17T20:14:13Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "5cb88e42a848321d6b6c0d497e6195a2882c2267",
+      "short": "5cb88e4",
+      "message": "Explain Linux SBOM dependency scope",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-17T20:13:49Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "6ce5ddb48e518548993bb7ee5d66a049485412ae",
       "short": "6ce5ddb",

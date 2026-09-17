@@ -1914,6 +1914,12 @@ docker exec &lt;name&gt; powershell -File C:\ops\render-snapshots.ps1 ...   # pe
         <code>sbom/&lt;sha&gt;/linux/results/sbom.json</code> on Linux. The host report builder normalises each
         inventory into a sibling <code>results.json</code> and navigable <code>index.html</code>; each workflow also
         uploads its report as an Actions artifact before publishing it to GitHub Pages.</p>
+      <p><strong>Platform dependency scope:</strong> VIPM uses the same project scan and CycloneDX options on both
+        workers, but VIPM&rsquo;s NI Package Manager (NIPM) dependency discovery is Windows-only. A Linux report
+        therefore contains the VIPM-managed packages that VIPM discovered and can legitimately show zero packages
+        when the corresponding Windows report contains only NIPM components. The Linux report displays this
+        limitation explicitly; use the Windows report to inspect NIPM dependencies rather than copying
+        Windows-only components into the Linux SBOM.</p>
       <p>The dashboard has a per-revision <strong>SBOM</strong> column. Its status pill links to the Pages report
         inside the shared report viewer; the viewer&rsquo;s <strong>CycloneDX JSON</strong> action opens the native
         machine-readable document. The report&rsquo;s Windows/Linux selector opens the other platform&rsquo;s
