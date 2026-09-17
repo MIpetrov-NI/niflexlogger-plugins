@@ -1,10 +1,45 @@
 {
   "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
-  "components": [],
+  "components": [
+    {
+      "type": "library",
+      "name": "labview-2026-profull-exe",
+      "version": "26.3.0.49510-0+f358",
+      "bom-ref": "pkg:deb/ubuntu/labview-2026-profull-exe@26.3.0.49510-0%2Bf358?arch=amd64&distro=ubuntu-22.04",
+      "purl": "pkg:deb/ubuntu/labview-2026-profull-exe@26.3.0.49510-0%2Bf358?arch=amd64&distro=ubuntu-22.04",
+      "properties": [
+        {
+          "name": "lvci:discovery-source",
+          "value": "dpkg-query"
+        },
+        {
+          "name": "lvci:package-manager",
+          "value": "dpkg"
+        },
+        {
+          "name": "lvci:matched-project-path",
+          "value": "/usr/local/natinst/LabVIEW-2026-64/labviewprofull"
+        }
+      ],
+      "supplier": {
+        "name": "National Instruments"
+      },
+      "description": "LabVIEW Pro/Full Executable",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.ni.com/r/ni-linux-device-drivers"
+        }
+      ]
+    }
+  ],
   "dependencies": [
     {
-      "ref": "pkg:vipm/Analog-Tachometer-Process"
+      "ref": "pkg:vipm/Analog-Tachometer-Process",
+      "dependsOn": [
+        "pkg:deb/ubuntu/labview-2026-profull-exe@26.3.0.49510-0%2Bf358?arch=amd64&distro=ubuntu-22.04"
+      ]
     }
   ],
   "metadata": {
@@ -13,7 +48,7 @@
       "name": "Analog Tachometer Process",
       "type": "application"
     },
-    "timestamp": "2026-09-17T22:04:23.027Z",
+    "timestamp": "2026-09-17T22:09:05.251Z",
     "tools": {
       "components": [
         {
@@ -31,13 +66,13 @@
       ]
     }
   },
-  "serialNumber": "urn:uuid:5f95cf64-ef30-42c0-89b3-25b2706862df",
+  "serialNumber": "urn:uuid:9c9b6f2a-7982-45c4-af19-906838775af2",
   "specVersion": "1.5",
   "version": 1,
   "properties": [
     {
       "name": "lvci:linux-system-package-discovery",
-      "value": "dpkg-query (0 components)"
+      "value": "dpkg-query (1 components)"
     }
   ]
 }
