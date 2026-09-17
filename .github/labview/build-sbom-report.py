@@ -190,11 +190,10 @@ def platform_limitations_banner_html(platform: str) -> str:
         'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
         '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>'
         '<line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
-        '<div class="lvci-needtool-t"><strong>Linux dependency scope</strong>'
-        'VIPM CLI scans the same LabVIEW project on both platforms, but NI Package Manager (NIPM) '
-        'dependency discovery is a Windows-only VIPM feature. This Linux report contains the '
-        'VIPM-managed packages that VIPM discovered; a zero count does not mean the project has no '
-        'NI or LabVIEW dependencies. Open the Windows report to inspect NIPM components.</div></div>'
+        '<div class="lvci-needtool-t"><strong>Linux package discovery</strong>'
+        'VIPM discovers VI packages, while the Linux worker maps referenced LabVIEW files to their '
+        'owning Debian packages with dpkg-query. Linux package names and versions can differ from '
+        'the corresponding Windows NIPM components.</div></div>'
     )
 
 

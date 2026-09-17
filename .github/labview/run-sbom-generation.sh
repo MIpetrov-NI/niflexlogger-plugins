@@ -111,4 +111,9 @@ if ! grep -Eq '"bomFormat"[[:space:]]*:[[:space:]]*"CycloneDX"' "$out_path"; the
   exit 1
 fi
 
+python3 "$workspace/.github/labview/enrich-sbom-linux.py" \
+  --sbom "$out_path" \
+  --project "$project" \
+  --labview-bin "$labview_bin"
+
 echo "Linux CycloneDX SBOM generated successfully: $out_path"
