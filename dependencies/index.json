@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "e87fc5259dbcbbd284b3ef7c4f2471f2ef89d276",
+  "sha": "eb0ced65df206ed403d241a5ea6fbfb367b0f6f9",
   "revisions": [
+    {
+      "sha": "eb0ced65df206ed403d241a5ea6fbfb367b0f6f9",
+      "short": "eb0ced6",
+      "message": "Merge pull request #3 from MIpetrov-NI/test/sbom-dashboard-integration",
+      "author": "Milena",
+      "date": "2026-09-17T19:06:37Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "e87fc5259dbcbbd284b3ef7c4f2471f2ef89d276",
+      "short": "e87fc52",
+      "message": "Test SBOM dashboard integration",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-17T17:48:17Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "4289c818550a69924facd609727ad5a394bba7d1",
       "short": "4289c81",
