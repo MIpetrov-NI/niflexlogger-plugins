@@ -1,0 +1,31 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:vipm/Analog-Tachometer-Process"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "pkg:vipm/Analog-Tachometer-Process",
+      "name": "Analog Tachometer Process",
+      "type": "application"
+    },
+    "timestamp": "2026-09-17T19:56:03.426Z",
+    "tools": {
+      "components": [
+        {
+          "name": "vipm-cli",
+          "publisher": "JKI",
+          "type": "application",
+          "version": "26.3.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:656d8cc6-35df-4307-b93a-66fc252a9395",
+  "specVersion": "1.5",
+  "version": 1
+}
