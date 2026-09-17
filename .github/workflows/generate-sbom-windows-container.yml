@@ -48,7 +48,7 @@ permissions:
   actions: write  # wait-for-worker-image.sh reads worker-image build runs and starts the first build on a fresh fork
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.inputs.commit_sha || github.sha }}
+  group: ${{ github.workflow }}-${{ github.event.inputs.commit_sha || github.event.pull_request.head.sha || github.sha }}
   cancel-in-progress: false
 
 jobs:
@@ -71,7 +71,7 @@ jobs:
               echo "sha=${FULL:-$INPUT}" >> "$GITHUB_OUTPUT"
             fi
           else
-            echo "sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+            echo "sha=${{ github.event.pull_request.head.sha || github.sha }}" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Post pending status

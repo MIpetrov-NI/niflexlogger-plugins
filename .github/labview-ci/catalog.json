@@ -4824,7 +4824,8 @@
       "status": "stable",
       "recommended": false,
       "supportsOs": [
-        "windows"
+        "windows",
+        "linux"
       ],
       "requires": [],
       "recommends": [
@@ -4840,9 +4841,12 @@
           ".github/workflows/generate-sbom-windows-container.yml",
           ".github/labview/run-sbom-generation.ps1"
         ],
-        "linux": []
+        "linux": [
+          ".github/workflows/generate-sbom-linux-container.yml",
+          ".github/labview/run-sbom-generation.sh"
+        ]
       },
-      "notes": "Runs the configured LabVIEW SBOM GENERATION headlessly in the Windows worker, Windows-only because the frameworks ship as VIPM packages."
+      "notes": "Runs VIPM SBOM generation headlessly in the Windows and Linux workers and publishes platform-specific CycloneDX reports to the dashboard."
     }
   ]
 }

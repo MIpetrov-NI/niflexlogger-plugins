@@ -1,0 +1,265 @@
+name: Generate SBOM — Linux Container
+run-name: Generate SBOM Linux container - ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.commit_sha || github.event.pull_request.head.sha || github.sha }}
+
+# Generates the Linux counterpart of the VIPM CycloneDX SBOM and deploys it
+# under sbom/<sha>/linux/ so the Pages report can switch between platforms.
+
+on:
+  pull_request:
+    paths:
+      - '**.vipc'
+      - '**.vip'
+      - '**.vi'
+      - '**.ctl'
+      - '**.lvproj'
+      - '**.lvlib'
+      - '**.lvclass'
+      - '!.github/**'
+  push:
+    branches: [main]
+    paths:
+      - '**.vipc'
+      - '**.vip'
+      - '**.vi'
+      - '**.ctl'
+      - '**.lvproj'
+      - '**.lvlib'
+      - '**.lvclass'
+      - '!.github/**'
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Commit SHA to evaluate (leave blank for current HEAD)'
+        required: false
+        default: ''
+
+env:
+  LABVIEW_CONTAINER_IMAGE: ''
+  PAGES_URL: ${{ vars.PAGES_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+
+permissions:
+  contents: write
+  pages: write
+  statuses: write
+  packages: read
+  actions: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.commit_sha || github.event.pull_request.head.sha || github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  generate-sbom-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Determine target SHA
+        id: sha
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          INPUT="${{ github.event.inputs.commit_sha }}"
+          if printf '%s' "$INPUT" | grep -Eiq '^[0-9a-f]{40}$'; then
+            echo "sha=$INPUT" >> "$GITHUB_OUTPUT"
+          elif [ -n "$INPUT" ]; then
+            FULL=$(gh api "repos/${{ github.repository }}/commits/$INPUT" --jq '.sha' 2>/dev/null || true)
+            echo "sha=${FULL:-$INPUT}" >> "$GITHUB_OUTPUT"
+          else
+            echo "sha=${{ github.event.pull_request.head.sha || github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post pending status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -s -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ steps.sha.outputs.sha }}" \
+            -d "{\"state\":\"pending\",\"target_url\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\",\"description\":\"SBOM generation (Linux) in progress\",\"context\":\"CI / SBOM Generation (Linux)\"}"
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.sha.outputs.sha }}
+          fetch-depth: 0
+
+      - name: Restore CI scripts from main
+        if: github.event.inputs.commit_sha != ''
+        run: |
+          git fetch --no-tags origin "${{ github.event.repository.default_branch }}"
+          git checkout FETCH_HEAD -- .github/labview .github/workflows .github/actions/publish-gh-pages
+
+      - name: Resolve Linux container image name
+        env:
+          IMAGE_OVERRIDE: ${{ vars.LABVIEW_IMAGE_NAME }}
+          ACTION_ID: sbom-generation
+        run: |
+          selected=$(python3 - <<'PY'
+          import os, pathlib, re
+          action_id = os.environ.get('ACTION_ID', '')
+          cfg = pathlib.Path('.github/labview-ci.yml')
+          use = ''
+          actions = {}
+          if cfg.exists():
+              section = ''
+              for line in cfg.read_text(encoding='utf-8').splitlines():
+                  if re.match(r'^\s*container:\s*$', line): section = 'container'; continue
+                  if section == 'container':
+                      match = re.match(r'^\s{4}use:\s*"?([^"#]+)"?', line)
+                      if match: use = match.group(1).strip()
+                      if re.match(r'^\s{4}actions:\s*$', line): section = 'actions'; continue
+                  elif section == 'actions':
+                      match = re.match(r'^\s{6}([A-Za-z0-9_.-]+):\s*"?([^"#]+)"?', line)
+                      if match: actions[match.group(1)] = match.group(2).strip()
+                      if re.match(r'^\s{0,4}\S', line): section = 'container'
+          print(actions.get(action_id) or use or '')
+          PY
+          )
+          owner=$(printf '%s' "${GITHUB_REPOSITORY%%/*}" | tr '[:upper:]' '[:lower:]')
+          name="${IMAGE_OVERRIDE:-${GITHUB_REPOSITORY##*/}-labview}"
+          name=$(printf '%s' "$name" | tr '[:upper:]' '[:lower:]')
+          case "$selected" in
+            ''|latest) image="ghcr.io/${owner}/${name}:linux-latest"; worker_workflow="Build LabVIEW CI Image - Linux" ;;
+            base|none) image="nationalinstruments/labview:latest-linux"; worker_workflow="" ;;
+            linux-beta-*) image="ghcr.io/${owner}/${name}:${selected}"; worker_workflow="Build LabVIEW CI Image - Linux Beta" ;;
+            linux-*) image="ghcr.io/${owner}/${name}:${selected}"; worker_workflow="Build LabVIEW CI Image - Linux" ;;
+            *) image="ghcr.io/${owner}/${name}:linux-${selected}"; worker_workflow="Build LabVIEW CI Image - Linux" ;;
+          esac
+          echo "LABVIEW_CONTAINER_IMAGE=$image" >> "$GITHUB_ENV"
+          echo "LINUX_WORKER_WORKFLOW=$worker_workflow" >> "$GITHUB_ENV"
+          echo "Using Linux container image: $image"
+
+      - name: Wait for Linux worker image build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "$LABVIEW_CONTAINER_IMAGE" = "nationalinstruments/labview:latest-linux" ]; then
+            echo "Using the NI Linux base image; no Linux worker build to wait for."
+            exit 0
+          fi
+          bash .github/labview/wait-for-worker-image.sh "${{ steps.sha.outputs.sha }}" "${{ github.event.before }}" "$LINUX_WORKER_WORKFLOW"
+
+      - name: Log in to GHCR
+        if: env.LABVIEW_CONTAINER_IMAGE != 'nationalinstruments/labview:latest-linux'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull LabVIEW Linux container
+        id: pull
+        run: docker pull ${{ env.LABVIEW_CONTAINER_IMAGE }}
+        continue-on-error: true
+
+      - name: Read worker version
+        id: worker
+        if: steps.pull.outcome == 'success'
+        run: |
+          WV=$(docker inspect --format '{{ index .Config.Labels "com.cotc.ci-worker.version" }}' "$LABVIEW_CONTAINER_IMAGE" 2>/dev/null || true)
+          [ "$WV" = "<no value>" ] && WV=""
+          echo "version=$WV" >> "$GITHUB_OUTPUT"
+          echo "Worker version: $WV"
+
+      - name: Run SBOM generator inside Linux container
+        id: run
+        if: steps.pull.outcome == 'success'
+        run: |
+          mkdir -p "${{ github.workspace }}/ci-out/sbom/results"
+          docker run --rm \
+            -e "GITHUB_REPOSITORY=${{ github.repository }}" \
+            -e "GITHUB_SHA=${{ steps.sha.outputs.sha }}" \
+            -e "LABVIEW_VERSION=${{ vars.LABVIEW_VERSION || '2026' }}" \
+            -v "${{ github.workspace }}:/workspace" \
+            ${{ env.LABVIEW_CONTAINER_IMAGE }} \
+            bash /workspace/.github/labview/run-sbom-generation.sh \
+              /workspace \
+              /workspace/ci-out/sbom/results
+
+      - name: Build friendly SBOM report
+        id: report
+        if: steps.pull.outcome == 'success'
+        continue-on-error: true
+        run: |
+          OUT="${{ github.workspace }}/ci-out/sbom"
+          python3 .github/labview/build-sbom-report.py \
+            --results   "$OUT/results" \
+            --out       "$OUT" \
+            --sha       "${{ steps.sha.outputs.sha }}" \
+            --platform  linux \
+            --repo      "${{ github.repository }}" \
+            --pages-url "${{ env.PAGES_URL }}" \
+            --labview-version "${{ vars.LABVIEW_VERSION || '2026' }}" \
+            --commit-msg "$(git log -1 --pretty=%s   ${{ steps.sha.outputs.sha }})" \
+            --author     "$(git log -1 --pretty=%an  ${{ steps.sha.outputs.sha }})" \
+            --date       "$(git log -1 --pretty=%cI  ${{ steps.sha.outputs.sha }})"
+          if [ -f "$OUT/index.html" ]; then echo "exists=true" >> "$GITHUB_OUTPUT"; else echo "exists=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Upload report artifact
+        if: steps.report.outputs.exists == 'true'
+        uses: actions/upload-artifact@v6
+        with:
+          name: sbom-linux-report-${{ steps.sha.outputs.sha }}
+          path: ${{ github.workspace }}/ci-out/sbom/
+          if-no-files-found: warn
+
+      - name: Deploy report to GitHub Pages
+        id: deploy
+        if: steps.report.outputs.exists == 'true'
+        uses: ./.github/actions/publish-gh-pages
+        with:
+          publish_dir: ${{ github.workspace }}/ci-out/sbom
+          destination_dir: sbom/${{ steps.sha.outputs.sha }}/linux
+
+      - name: Post commit status
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OUT="${{ github.workspace }}/ci-out/sbom"
+          STATE="failure"; DESC="SBOM generation (Linux) failed"
+          if [ "${{ steps.report.outputs.exists }}" = "true" ] && [ "${{ steps.deploy.outcome }}" = "success" ] && [ -f "$OUT/results.json" ]; then
+            REPORT_URL="${{ env.PAGES_URL }}/sbom/${{ steps.sha.outputs.sha }}/linux/index.html"
+            pkgs=$(jq -r '.summary.total_packages // 0' "$OUT/results.json")
+            STATE="success"; DESC="${pkgs} dependencies documented (Linux)"
+          elif [ "${{ steps.report.outputs.exists }}" = "true" ]; then
+            REPORT_URL="${{ env.PAGES_URL }}/sbom/${{ steps.sha.outputs.sha }}/linux/index.html"
+          else
+            REPORT_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
+          if [ "${{ steps.pull.outcome }}" != "success" ]; then
+            DESC="Worker image unavailable - build it via Configure Workers"
+          fi
+          curl -s -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ steps.sha.outputs.sha }}" \
+            -d "{\"state\":\"$STATE\",\"target_url\":\"$REPORT_URL\",\"description\":\"$DESC\",\"context\":\"CI / SBOM Generation (Linux)\"}"
+
+      - name: Post worker version status
+        if: always() && steps.pull.outcome == 'success' && steps.worker.outputs.version != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WV="${{ steps.worker.outputs.version }}"
+          URL="${{ env.PAGES_URL }}/workers/linux/${WV}/manifest.html"
+          curl -s -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ steps.sha.outputs.sha }}" \
+            -d "{\"state\":\"success\",\"target_url\":\"$URL\",\"description\":\"$WV\",\"context\":\"CI / Worker (linux)\"}"
+
+      - name: Fail the job if generation failed
+        if: always() && (steps.pull.outcome != 'success' || steps.run.outcome != 'success' || steps.report.outcome != 'success' || steps.deploy.outcome != 'success')
+        run: |
+          if [ "${{ steps.pull.outcome }}" != "success" ]; then
+            echo "::error::The Linux worker image could not be pulled. Build it via Configure Workers, then re-run this job."
+          elif [ "${{ steps.report.outcome }}" != "success" ]; then
+            echo "::error::The Linux SBOM report could not be built."
+          elif [ "${{ steps.deploy.outcome }}" != "success" ]; then
+            echo "::error::The Linux SBOM report could not be published to GitHub Pages."
+          else
+            echo "::error::Linux SBOM generation failed. Open the generator step log for VIPM and LabVIEW diagnostics."
+          fi
+          exit 1

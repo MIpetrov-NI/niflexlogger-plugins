@@ -1,0 +1,85 @@
+lvci:sbom-linux:
+  extends: .lvci:linux-docker
+  stage: verify
+  needs:
+    - job: lvci:worker-linux
+      optional: true
+      artifacts: false
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: manual
+      allow_failure: true
+    - changes:
+        - "**/*.vipc"
+        - "**/*.vip"
+        - "**/*.vi"
+        - "**/*.ctl"
+        - "**/*.lvproj"
+        - "**/*.lvlib"
+        - "**/*.lvclass"
+  script:
+    - |
+      set +e
+      report_dir="ci-out/sbom"
+      results_dir="$report_dir/results"
+      mkdir -p "$results_dir"
+      if [ -n "${LVCI_LINUX_IMAGE:-}" ]; then
+        image="$LVCI_LINUX_IMAGE"
+      elif [ "${LVCI_USE_CUSTOM_IMAGE:-false}" = "true" ]; then
+        image="${CI_REGISTRY_IMAGE}/labview:linux-latest"
+      else
+        image="nationalinstruments/labview:latest-linux"
+      fi
+      if [[ "$image" == "${CI_REGISTRY_IMAGE}"/* ]]; then
+        echo "$CI_REGISTRY_PASSWORD" | docker login "$CI_REGISTRY" --username "$CI_REGISTRY_USER" --password-stdin
+      fi
+      docker pull "$image"
+      pull_exit=$?
+      sbom_exit=1
+      if [ "$pull_exit" -eq 0 ]; then
+        docker run --rm \
+          -e "GITHUB_REPOSITORY=$CI_PROJECT_PATH" \
+          -e "GITHUB_SHA=$CI_COMMIT_SHA" \
+          -e "LABVIEW_VERSION=$LVCI_LABVIEW_VERSION" \
+          -v "$CI_PROJECT_DIR:/workspace" \
+          "$image" \
+          bash /workspace/.github/labview/run-sbom-generation.sh \
+            /workspace \
+            "/workspace/$results_dir"
+        sbom_exit=$?
+      else
+        printf 'Could not pull LabVIEW image %s\n' "$image" > "$results_dir/runner-error.txt"
+      fi
+      python3 .github/labview/build-sbom-report.py \
+        --results "$results_dir" \
+        --out "$report_dir" \
+        --sha "$CI_COMMIT_SHA" \
+        --platform linux \
+        --repo "$CI_PROJECT_PATH" \
+        --pages-url "$CI_PAGES_URL" \
+        --labview-version "$LVCI_LABVIEW_VERSION" \
+        --commit-msg "$(git log -1 --pretty=%s "$CI_COMMIT_SHA")" \
+        --author "$(git log -1 --pretty=%an "$CI_COMMIT_SHA")" \
+        --date "$(git log -1 --pretty=%cI "$CI_COMMIT_SHA")"
+      report_exit=$?
+      python3 .gitlab/labview-ci/scripts/stage-report.py \
+        --source "$report_dir" \
+        --destination "sbom/$CI_COMMIT_SHA/linux" \
+        --fallback "SBOM generation did not produce a report. See the GitLab job log."
+      stage_exit=$?
+      if [ "$sbom_exit" -ne 0 ]; then
+        exit "$sbom_exit"
+      fi
+      if [ "$report_exit" -ne 0 ]; then
+        exit "$report_exit"
+      fi
+      exit "$stage_exit"
+  artifacts:
+    when: always
+    expire_in: 30 days
+    reports:
+      cyclonedx: ci-out/sbom/results/sbom.json
+    paths:
+      - ci-out/sbom/
+      - ci-out/gitlab-pages/sbom/$CI_COMMIT_SHA/linux/
