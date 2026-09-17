@@ -1916,8 +1916,9 @@ docker exec &lt;name&gt; powershell -File C:\ops\render-snapshots.ps1 ...   # pe
         uploads its report as an Actions artifact before publishing it to GitHub Pages.</p>
       <p><strong>Linux system-package discovery:</strong> VIPM uses the same project scan and CycloneDX options on
         both workers, but its NIPM lookup is Windows-only. After the Linux VIPM scan, the Linux driver recursively
-        reads the selected project&rsquo;s XML reference graph, resolves LabVIEW path tokens such as
-        <code>&lt;vilib&gt;</code> and <code>&lt;resource&gt;</code>, and uses <code>dpkg-query -S</code> to map
+        reads the selected project&rsquo;s XML reference graph using LabVIEW&rsquo;s relative-URL conventions,
+        resolves path tokens such as <code>&lt;vilib&gt;</code> and <code>&lt;resource&gt;</code>, and uses
+        <code>dpkg-query -S</code> to map
         referenced installed paths to their owning Debian packages. It then reads package metadata with
         <code>dpkg-query -W</code> and appends <code>pkg:deb</code> CycloneDX components and root dependency edges.
         Each added component carries <code>lvci:discovery-source=dpkg-query</code>, its matched project paths, and

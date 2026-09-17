@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "011136df2d9a551d6729574a87f92a192c4b34ce",
+  "sha": "6b18f1a66ffa74307e1d4643e152eb4960032bf7",
   "revisions": [
+    {
+      "sha": "6b18f1a66ffa74307e1d4643e152eb4960032bf7",
+      "short": "6b18f1a",
+      "message": "Merge pull request #8 from MIpetrov-NI/test/linux-sbom-url-resolution",
+      "author": "Milena",
+      "date": "2026-09-17T22:07:06Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "a7b47c3142fbd765a32c05713dd6fe95397203e3",
+      "short": "a7b47c3",
+      "message": "Resolve LabVIEW URLs during SBOM discovery",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-17T22:06:41Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "011136df2d9a551d6729574a87f92a192c4b34ce",
       "short": "011136d",
