@@ -71,6 +71,8 @@ def _project_references(project: Path, labview_root: Path) -> dict[Path, Path]:
             if re.match(r"^[A-Za-z]:/", url):
                 continue
             referenced = (source.parent / url).resolve()
+            if not referenced.exists() and url.startswith("../"):
+                referenced = (source.parent / url[3:]).resolve()
             if referenced.suffix.lower() in XML_EXTENSIONS and referenced.exists():
                 pending.append(referenced)
 
@@ -181,6 +183,8 @@ def enrich(sbom_path: Path, project: Path, labview_bin: Path) -> int:
     labview_root = labview_bin.parent
     referenced = _project_references(project, labview_root)
     referenced[labview_bin] = labview_bin
+    resolved_labview_bin = labview_bin.resolve()
+    referenced[resolved_labview_bin] = resolved_labview_bin
 
     ownership_paths: dict[Path, list[Path]] = {}
     floors: dict[Path, Path] = {}
