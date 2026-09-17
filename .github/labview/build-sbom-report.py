@@ -107,7 +107,7 @@ def build_data(args) -> dict:
             meta_extra = {}
 
     if args.platform == "windows":
-        platforms = [{"id": "windows", "url": None}, {"id": "linux", "url": None}]
+        platforms = [{"id": "windows", "url": None}, {"id": "linux", "url": "linux/results.json"}]
         snap_depth = "../../"
     else:
         platforms = [{"id": "windows", "url": "../results.json"}, {"id": "linux", "url": None}]
@@ -337,17 +337,16 @@ function renderToggle(){
   host.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>switchPlatform(b.dataset.plat)));
 }
 
-async function switchPlatform(pid){
+function switchPlatform(pid){
   if(pid===CUR) return;
   const p = PLATFORMS.find(x=>x.id===pid); if(!p) return;
-  let data = CACHE[pid];
-  if(data===undefined){
-    try{ data = await fetch(p.url).then(r=>r.json()); }catch(e){ data = null; }
-    CACHE[pid] = data;
-  }
-  CUR = pid;
-  if(!data){ renderToggle(); showEmpty(pid); return; }
-  D = data; renderToggle(); renderAll();
+  if(p.url==null) return;
+  const suffix = pid==='linux' ? '/linux' : '';
+  const report = `${META.pages_url}/sbom/${META.sha}${suffix}/index.html`;
+  if(window.top===window.self){ window.location.href=report; return; }
+  const src = `../sbom/${META.sha}${suffix}/index.html`;
+  const title = `SBOM \u00b7 ${(META.short||META.sha||'').slice(0,7)}`;
+  window.top.location.href = `${META.pages_url}/report/index.html?type=sbom-report&sha=${encodeURIComponent(META.sha)}&short=${encodeURIComponent(META.short||'')}&platform=${encodeURIComponent(pid)}&src=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
 }
 
 function showEmpty(pid){

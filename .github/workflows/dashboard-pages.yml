@@ -29,6 +29,7 @@ on:
       - "Build LabVIEW CI Image"
       - "Build LabVIEW CI Image - Linux"
       - "Generate SBOM — Windows Container"
+      - "Generate SBOM — Linux Container"
     types: [completed]
   schedule:
     - cron: '0 * * * *'
