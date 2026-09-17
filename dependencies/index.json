@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "e536c0e23e7aeae1c560feb44701820f25d449db",
+  "sha": "e87fc5259dbcbbd284b3ef7c4f2471f2ef89d276",
   "revisions": [
+    {
+      "sha": "4289c818550a69924facd609727ad5a394bba7d1",
+      "short": "4289c81",
+      "message": "ci: adopt LabVIEW CI tooling v4.18.2 (config + scripts; 23 workflow file(s) deferred)",
+      "author": "github-actions[bot]",
+      "date": "2026-09-17T17:20:51Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "e536c0e23e7aeae1c560feb44701820f25d449db",
       "short": "e536c0e",
