@@ -42,7 +42,7 @@ th{background:var(--surface2);color:var(--muted);font-weight:600}
 </style>
 </head>
 <body>
-<div class="lvci-needtool" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div class="lvci-needtool-t"><strong>Linux dependency scope</strong>VIPM CLI scans the same LabVIEW project on both platforms, but NI Package Manager (NIPM) dependency discovery is a Windows-only VIPM feature. This Linux report contains the VIPM-managed packages that VIPM discovered; a zero count does not mean the project has no NI or LabVIEW dependencies. Open the Windows report to inspect NIPM components.</div></div>
+<div class="lvci-needtool" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div class="lvci-needtool-t"><strong>Linux package discovery</strong>VIPM discovers VI packages, while the Linux worker maps referenced LabVIEW files to their owning Debian packages with dpkg-query. Linux package names and versions can differ from the corresponding Windows NIPM components.</div></div>
 <div class="wrap">
   <h1>Software Bill of Materials (SBOM) <span class="plat" id="plat-toggle"></span></h1>
   <div class="sub" id="sub"></div>
@@ -68,7 +68,7 @@ th{background:var(--surface2);color:var(--muted);font-weight:600}
   </div>
 </div>
 
-<script id="sbom-data" type="application/json">{"meta": {"sha": "842f11f57319d2b99d2cb932253b22693ea38582", "short": "842f11f", "platform": "linux", "repo": "MIpetrov-NI/niflexlogger-plugins", "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins", "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/", "labview_version": "2026", "commit": {"message": "Add Tone Measurements Plugin (#28)", "author": "Doug Bendele", "date": "2026-07-02T15:01:56-05:00"}, "generated_utc": "2026-09-17 20:16 UTC", "spdx_version": "CycloneDX 1.5", "created": ""}, "summary": {"total_packages": 0}, "platforms": [{"id": "windows", "url": "../results.json"}, {"id": "linux", "url": null}], "packages": [], "tooling": {"missing": []}}</script>
+<script id="sbom-data" type="application/json">{"meta": {"sha": "842f11f57319d2b99d2cb932253b22693ea38582", "short": "842f11f", "platform": "linux", "repo": "MIpetrov-NI/niflexlogger-plugins", "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins", "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/", "labview_version": "2026", "commit": {"message": "Add Tone Measurements Plugin (#28)", "author": "Doug Bendele", "date": "2026-07-02T15:01:56-05:00"}, "generated_utc": "2026-09-17 22:04 UTC", "spdx_version": "CycloneDX 1.5", "created": ""}, "summary": {"total_packages": 0}, "platforms": [{"id": "windows", "url": "../results.json"}, {"id": "linux", "url": null}], "packages": [], "tooling": {"missing": []}}</script>
 <script>
 const SELF = JSON.parse(document.getElementById('sbom-data').textContent);
 const PLATFORMS = SELF.platforms || [{id:SELF.meta.platform,url:null}];

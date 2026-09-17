@@ -13,7 +13,7 @@
       "name": "Analog Tachometer Process",
       "type": "application"
     },
-    "timestamp": "2026-09-17T20:16:26.142Z",
+    "timestamp": "2026-09-17T22:04:23.027Z",
     "tools": {
       "components": [
         {
@@ -21,11 +21,23 @@
           "publisher": "JKI",
           "type": "application",
           "version": "26.3.0"
+        },
+        {
+          "type": "application",
+          "name": "dpkg-query",
+          "publisher": "Debian",
+          "version": "1.21.1"
         }
       ]
     }
   },
-  "serialNumber": "urn:uuid:f7c5a186-2047-4dcd-a017-7e6e8d700f12",
+  "serialNumber": "urn:uuid:5f95cf64-ef30-42c0-89b3-25b2706862df",
   "specVersion": "1.5",
-  "version": 1
+  "version": 1,
+  "properties": [
+    {
+      "name": "lvci:linux-system-package-discovery",
+      "value": "dpkg-query (0 components)"
+    }
+  ]
 }
