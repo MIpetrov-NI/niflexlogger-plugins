@@ -68,7 +68,7 @@ th{background:var(--surface2);color:var(--muted);font-weight:600}
   </div>
 </div>
 
-<script id="sbom-data" type="application/json">{"meta": {"sha": "842f11f57319d2b99d2cb932253b22693ea38582", "short": "842f11f", "platform": "windows", "repo": "MIpetrov-NI/niflexlogger-plugins", "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins", "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/", "labview_version": "2026", "commit": {"message": "Add Tone Measurements Plugin (#28)", "author": "Doug Bendele", "date": "2026-07-02T15:01:56-05:00"}, "generated_utc": "2026-09-17 19:23 UTC", "spdx_version": "CycloneDX 1.5", "created": ""}, "summary": {"total_packages": 2}, "platforms": [{"id": "windows", "url": null}, {"id": "linux", "url": null}], "packages": [{"name": "ni-labview-2026-coreother", "version": "26.1.2.49158-0+f6", "vendor": "National Instruments"}, {"name": "ni-labview-2026-vilib", "version": "26.1.2.49158-0+f6", "vendor": "National Instruments"}], "tooling": {"missing": []}}</script>
+<script id="sbom-data" type="application/json">{"meta": {"sha": "842f11f57319d2b99d2cb932253b22693ea38582", "short": "842f11f", "platform": "windows", "repo": "MIpetrov-NI/niflexlogger-plugins", "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins", "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/", "labview_version": "2026", "commit": {"message": "Add Tone Measurements Plugin (#28)", "author": "Doug Bendele", "date": "2026-07-02T15:01:56-05:00"}, "generated_utc": "2026-09-17 20:16 UTC", "spdx_version": "CycloneDX 1.5", "created": ""}, "summary": {"total_packages": 2}, "platforms": [{"id": "windows", "url": null}, {"id": "linux", "url": "linux/results.json"}], "packages": [{"name": "ni-labview-2026-coreother", "version": "26.1.2.49158-0+f6", "vendor": "National Instruments"}, {"name": "ni-labview-2026-vilib", "version": "26.1.2.49158-0+f6", "vendor": "National Instruments"}], "tooling": {"missing": []}}</script>
 <script>
 const SELF = JSON.parse(document.getElementById('sbom-data').textContent);
 const PLATFORMS = SELF.platforms || [{id:SELF.meta.platform,url:null}];
@@ -100,17 +100,16 @@ function renderToggle(){
   host.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>switchPlatform(b.dataset.plat)));
 }
 
-async function switchPlatform(pid){
+function switchPlatform(pid){
   if(pid===CUR) return;
   const p = PLATFORMS.find(x=>x.id===pid); if(!p) return;
-  let data = CACHE[pid];
-  if(data===undefined){
-    try{ data = await fetch(p.url).then(r=>r.json()); }catch(e){ data = null; }
-    CACHE[pid] = data;
-  }
-  CUR = pid;
-  if(!data){ renderToggle(); showEmpty(pid); return; }
-  D = data; renderToggle(); renderAll();
+  if(p.url==null) return;
+  const suffix = pid==='linux' ? '/linux' : '';
+  const report = `${META.pages_url}/sbom/${META.sha}${suffix}/index.html`;
+  if(window.top===window.self){ window.location.href=report; return; }
+  const src = `../sbom/${META.sha}${suffix}/index.html`;
+  const title = `SBOM \u00b7 ${(META.short||META.sha||'').slice(0,7)}`;
+  window.top.location.href = `${META.pages_url}/report/index.html?type=sbom-report&sha=${encodeURIComponent(META.sha)}&short=${encodeURIComponent(META.short||'')}&platform=${encodeURIComponent(pid)}&src=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
 }
 
 function showEmpty(pid){
