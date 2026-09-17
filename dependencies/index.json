@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "5041b9bca0474116d545a4e01e60b8c7c5018881",
+  "sha": "011136df2d9a551d6729574a87f92a192c4b34ce",
   "revisions": [
+    {
+      "sha": "011136df2d9a551d6729574a87f92a192c4b34ce",
+      "short": "011136d",
+      "message": "Merge pull request #7 from MIpetrov-NI/test/linux-sbom-permissions",
+      "author": "Milena",
+      "date": "2026-09-17T22:02:33Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "09fc48022e5c0d87e81886a076e9698f9a521e0e",
+      "short": "09fc480",
+      "message": "Preserve enriched SBOM permissions",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-17T22:02:04Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "5041b9bca0474116d545a4e01e60b8c7c5018881",
       "short": "5041b9b",
