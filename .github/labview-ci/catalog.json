@@ -4843,10 +4843,11 @@
         ],
         "linux": [
           ".github/workflows/generate-sbom-linux-container.yml",
-          ".github/labview/run-sbom-generation.sh"
+          ".github/labview/run-sbom-generation.sh",
+          ".github/labview/enrich-sbom-linux.py"
         ]
       },
-      "notes": "Runs VIPM SBOM generation headlessly in the Windows and Linux workers and publishes platform-specific CycloneDX reports to the dashboard."
+      "notes": "Runs VIPM SBOM generation headlessly in the Windows and Linux workers and publishes platform-specific CycloneDX reports to the dashboard. Linux enriches VIPM output with project-relevant Debian package ownership from dpkg-query."
     }
   ]
 }
