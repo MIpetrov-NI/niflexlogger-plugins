@@ -679,7 +679,8 @@
       prefix: 'sbom', cap: 'sbom-generation', label: 'SBOM',
       regenLabel: 'Regenerate SBOM', rawLabel: 'CycloneDX JSON', rawName: 'results/sbom.json',
       probeName: 'results.json',
-      workflow: { windows: 'generate-sbom-windows-container.yml' }
+      workflow: { windows: 'generate-sbom-windows-container.yml',
+                  linux:   'generate-sbom-linux-container.yml' }
     }
   };
   var DOC = DOCTYPES[ctx] || null;   // non-null only on a per-revision report
@@ -731,7 +732,8 @@
     root = trimSlash(root || base);
     if (key === 'snapshots') return root + '/vi-snapshots/' + (sha ? '?sha=' + encodeURIComponent(sha) : '');
     var d = DOCTYPES[key]; if (!d || !sha) return root + '/';
-        var rel = '../' + d.prefix + '/' + sha + '/index.html';
+    var platformDir = cfg.platform === 'linux' && d.workflow && d.workflow.linux ? 'linux/' : '';
+    var rel = '../' + d.prefix + '/' + sha + '/' + platformDir + 'index.html';
     var title = d.label + ' \u00b7 ' + sha.slice(0, 7);
     return root + '/report/index.html?type=' + encodeURIComponent(key)
          + '&sha=' + encodeURIComponent(sha)
@@ -1263,7 +1265,8 @@
            + '&src=' + encodeURIComponent(src)
            + '&title=' + encodeURIComponent(title);
     }
-    return base + '/' + DOC.prefix + '/' + sha + '/index.html';
+    var platformDir = cfg.platform === 'linux' && DOC.workflow && DOC.workflow.linux ? 'linux/' : '';
+    return base + '/' + DOC.prefix + '/' + sha + '/' + platformDir + 'index.html';
   }
   function makeRevPicker() {
     var wrap = document.createElement('div'); wrap.className = 'lvci-rev lvci-rev-ctx';
@@ -1472,7 +1475,8 @@
   }
   function reportExists(d, sha) {
     if (!d || !sha) return Promise.resolve(false);
-    var root = base + '/' + d.prefix + '/' + sha + '/';
+    var platformDir = cfg.platform === 'linux' && d.workflow && d.workflow.linux ? 'linux/' : '';
+    var root = base + '/' + d.prefix + '/' + sha + '/' + platformDir;
     return fetch(root + (d.probeName || 'summary.json'), { method: 'HEAD', cache: 'no-cache' })
       .then(function (r) { return r.ok ? true : fetch(root + 'index.html', { method: 'HEAD', cache: 'no-cache' }).then(function (rr) { return rr.ok; }); })
       .catch(function () { return fetch(root + 'index.html', { method: 'HEAD', cache: 'no-cache' }).then(function (r) { return r.ok; }).catch(function () { return false; }); });

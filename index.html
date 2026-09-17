@@ -241,7 +241,7 @@
     // the install/Configure iframe and its in-flight work. When a refresh comes due
     // with a dialog open, keep re-checking and reload only once it is closed.
     (function () {
-      var REFRESH_MS = 900 * 1000;
+      var REFRESH_MS = 60 * 1000;
       if (!(REFRESH_MS > 0)) return;
       function tick() {
         if (lvciModalOpen()) { setTimeout(tick, 5000); return; }
@@ -280,8 +280,8 @@
   </div>
   <script>
   (function(){
-    var RT = {"masscompile": {"label": "Mass Compile", "platforms": {"windows": {"wf": "masscompile-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "masscompile-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vi-analyzer": {"label": "VI Analyzer", "platforms": {"windows": {"wf": "run-vi-analyzer-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "run-vi-analyzer-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vidiff": {"label": "VIDiff", "platforms": {"windows": {"wf": "vidiff-windows-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}, "linux": {"wf": "vidiff-linux-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}}}, "snapshots": {"label": "VI Snapshots", "platforms": {"all": {"wf": "vi-snapshots.yml", "inputs": {"mode": "backfill"}}}}, "snapshots2": {"label": "VI Browser 2.0 Snapshots", "platforms": {"windows": {"wf": "vi-snapshots-json-windows.yml", "inputs": {"target_sha": "{sha}"}}, "linux": {"wf": "vi-snapshots-json.yml", "inputs": {"mode": "head", "target_sha": "{sha}"}}}}, "unit-tests": {"label": "Unit Tests", "platforms": {"windows": {"wf": "unit-tests-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "builds": {"label": "Builds", "platforms": {"windows": {"wf": "build-binaries-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "build-binaries-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "sbom-generation": {"label": "SBOM Generation", "platforms": {"windows": {"wf": "generate-sbom-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}};
-    var RT_TIMING = {"masscompile": {"windows": {"total": 671.5, "work": null}, "linux": {"total": 213.0, "work": null}}, "vi-analyzer": {"windows": {"total": 1117.0, "work": null}, "linux": {"total": 487.5, "work": null}}, "vidiff": {"windows": {"total": 25.5, "work": null}, "linux": {"total": 24.0, "work": null}}, "snapshots2": {"windows": {"total": null, "work": null}, "linux": {"total": null, "work": null}}, "unit-tests": {"windows": {"total": 617.5, "work": null}}, "builds": {"windows": {"total": 698.0, "work": null}, "linux": {"total": 324.0, "work": null}}, "sbom-generation": {"windows": {"total": 948.0, "work": null}}};
+    var RT = {"masscompile": {"label": "Mass Compile", "platforms": {"windows": {"wf": "masscompile-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "masscompile-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vi-analyzer": {"label": "VI Analyzer", "platforms": {"windows": {"wf": "run-vi-analyzer-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "run-vi-analyzer-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vidiff": {"label": "VIDiff", "platforms": {"windows": {"wf": "vidiff-windows-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}, "linux": {"wf": "vidiff-linux-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}}}, "snapshots": {"label": "VI Snapshots", "platforms": {"all": {"wf": "vi-snapshots.yml", "inputs": {"mode": "backfill"}}}}, "snapshots2": {"label": "VI Browser 2.0 Snapshots", "platforms": {"windows": {"wf": "vi-snapshots-json-windows.yml", "inputs": {"target_sha": "{sha}"}}, "linux": {"wf": "vi-snapshots-json.yml", "inputs": {"mode": "head", "target_sha": "{sha}"}}}}, "unit-tests": {"label": "Unit Tests", "platforms": {"windows": {"wf": "unit-tests-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "builds": {"label": "Builds", "platforms": {"windows": {"wf": "build-binaries-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "build-binaries-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "sbom-generation": {"label": "SBOM Generation", "platforms": {"windows": {"wf": "generate-sbom-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "generate-sbom-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}};
+    var RT_TIMING = {"masscompile": {"windows": {"total": 671.5, "work": null}, "linux": {"total": 213.0, "work": null}}, "vi-analyzer": {"windows": {"total": 1117.0, "work": null}, "linux": {"total": 487.5, "work": null}}, "vidiff": {"windows": {"total": 25.5, "work": null}, "linux": {"total": 24.0, "work": null}}, "snapshots2": {"windows": {"total": null, "work": null}, "linux": {"total": null, "work": null}}, "unit-tests": {"windows": {"total": 617.5, "work": null}}, "builds": {"windows": {"total": 698.0, "work": null}, "linux": {"total": 324.0, "work": null}}, "sbom-generation": {"windows": {"total": 948.0, "work": null}, "linux": {"total": null, "work": null}}};
     var REPO = "MIpetrov-NI/niflexlogger-plugins";
     var BRANCH = "main";
     var TOK_KEY = "lvci_dispatch_token";
@@ -1319,7 +1319,7 @@
     };
     var CAP_ORDER = ['snapshots','snapshots2','vidiff','masscompile','vi-analyzer','unit-tests','antidoc','builds','sbom-generation'];
     var DIFF_CAPS = { snapshots:1, snapshots2:1, vidiff:1 };  // the lean "diff-based" subset
-    var PLATFORM_CAPS = { snapshots2:1, vidiff:1, masscompile:1, 'vi-analyzer':1, builds:1 };
+    var PLATFORM_CAPS = { snapshots2:1, vidiff:1, masscompile:1, 'vi-analyzer':1, builds:1, 'sbom-generation':1 };
     var platState = {};                         // cap id -> selected platform keys for history rows
     function capPlatforms(capId){ return (RT[capId] && RT[capId].platforms) ? Object.keys(RT[capId].platforms) : []; }
     function histHasPlatformPicker(capId){ return !!PLATFORM_CAPS[capId] && capPlatforms(capId).length > 1; }
@@ -1911,7 +1911,7 @@
   </div>
   <script>
   (function(){
-    var RT = {"masscompile": {"label": "Mass Compile", "platforms": {"windows": {"wf": "masscompile-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "masscompile-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vi-analyzer": {"label": "VI Analyzer", "platforms": {"windows": {"wf": "run-vi-analyzer-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "run-vi-analyzer-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vidiff": {"label": "VIDiff", "platforms": {"windows": {"wf": "vidiff-windows-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}, "linux": {"wf": "vidiff-linux-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}}}, "snapshots": {"label": "VI Snapshots", "platforms": {"all": {"wf": "vi-snapshots.yml", "inputs": {"mode": "backfill"}}}}, "snapshots2": {"label": "VI Browser 2.0 Snapshots", "platforms": {"windows": {"wf": "vi-snapshots-json-windows.yml", "inputs": {"target_sha": "{sha}"}}, "linux": {"wf": "vi-snapshots-json.yml", "inputs": {"mode": "head", "target_sha": "{sha}"}}}}, "unit-tests": {"label": "Unit Tests", "platforms": {"windows": {"wf": "unit-tests-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "builds": {"label": "Builds", "platforms": {"windows": {"wf": "build-binaries-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "build-binaries-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "sbom-generation": {"label": "SBOM Generation", "platforms": {"windows": {"wf": "generate-sbom-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}};
+    var RT = {"masscompile": {"label": "Mass Compile", "platforms": {"windows": {"wf": "masscompile-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "masscompile-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vi-analyzer": {"label": "VI Analyzer", "platforms": {"windows": {"wf": "run-vi-analyzer-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "run-vi-analyzer-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "vidiff": {"label": "VIDiff", "platforms": {"windows": {"wf": "vidiff-windows-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}, "linux": {"wf": "vidiff-linux-container.yml", "inputs": {"head_sha": "{sha}", "base_sha": "{parent}"}}}}, "snapshots": {"label": "VI Snapshots", "platforms": {"all": {"wf": "vi-snapshots.yml", "inputs": {"mode": "backfill"}}}}, "snapshots2": {"label": "VI Browser 2.0 Snapshots", "platforms": {"windows": {"wf": "vi-snapshots-json-windows.yml", "inputs": {"target_sha": "{sha}"}}, "linux": {"wf": "vi-snapshots-json.yml", "inputs": {"mode": "head", "target_sha": "{sha}"}}}}, "unit-tests": {"label": "Unit Tests", "platforms": {"windows": {"wf": "unit-tests-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "builds": {"label": "Builds", "platforms": {"windows": {"wf": "build-binaries-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "build-binaries-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}, "sbom-generation": {"label": "SBOM Generation", "platforms": {"windows": {"wf": "generate-sbom-windows-container.yml", "inputs": {"commit_sha": "{sha}"}}, "linux": {"wf": "generate-sbom-linux-container.yml", "inputs": {"commit_sha": "{sha}"}}}}};
     var HIST = [{"sha": "842f11f57319d2b99d2cb932253b22693ea38582", "short": "842f11f", "msg": "Add Tone Measurements Plugin (#28)", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 350}, "linux": {"have": 0, "total": 350}}}, {"sha": "ab13f856cd03fac9e3685633b6fbbee26314c61e", "short": "ab13f85", "msg": "[Tachometer Processing] Fix #26 by adding state to class data (#27)", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 342}, "linux": {"have": 0, "total": 342}}}, {"sha": "80342ffab5f8705709e53a50a5c68c2bfe394664", "short": "80342ff", "msg": "Add new plugin for DFT-spectra viewing based on SVT API (#24)", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 342}, "linux": {"have": 0, "total": 342}}}, {"sha": "3206ff3b614a958e3ee067e0d1a1e8ec099dd118", "short": "3206ff3", "msg": "Add new Output Sequencer plug-in. (#22)", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 330}, "linux": {"have": 0, "total": 330}}}, {"sha": "e878a3f5844fd49a84e0715de8f04312dd4d970c", "short": "e878a3f", "msg": "Add Analog Tachometer Process plug-in. (#17)", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 166}, "linux": {"have": 0, "total": 166}}}, {"sha": "818ca78863d3a467554178a4a14dfdcf1726b5ba", "short": "818ca78", "msg": "Add new Power Spectrum Density plug-in. (#20)", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 157}, "linux": {"have": 0, "total": 157}}}, {"sha": "5f01b04b2cec924c2927461288dde045ab02fb34", "short": "5f01b04", "msg": "Merge pull request #13 from ni/users/ccaltagi/move-plug-ins-to-pdk-plug-ins-fold", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 146}, "linux": {"have": 0, "total": 146}}}, {"sha": "b5b3a7160fea1bb03a6ca169b6b7cd35ead82465", "short": "b5b3a71", "msg": "Move the PDK plug-ins to a new PDK plugins folder.", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 146}, "linux": {"have": 0, "total": 146}}}, {"sha": "8598080bd929be4246ad768b815e0e65c42cddcc", "short": "8598080", "msg": "Add Sequencer Plugin", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 146}, "linux": {"have": 0, "total": 146}}}, {"sha": "f98e97553b79a58b9de4bb1b4e6be96b8acbb7bd", "short": "f98e975", "msg": "Fixed multiple instances issue and updated README", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 146}, "linux": {"have": 0, "total": 146}}}, {"sha": "8bd8320106f9c6c4fbff44b31a36d75ad0e4a57a", "short": "8bd8320", "msg": "Use Tree for UI instead", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 143}, "linux": {"have": 0, "total": 143}}}, {"sha": "585a82f0016d6660401e0a6220576ea4c1de8acf", "short": "585a82f", "msg": "Initial commit", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 152}, "linux": {"have": 0, "total": 152}}}, {"sha": "a52a07945ce1dee5fdcfae821fc61e8248d23d73", "short": "a52a079", "msg": "Add Historical Table Plugin", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 107}, "linux": {"have": 0, "total": 107}}}, {"sha": "3030ece0da8d995db5811a38af3d904e3c0f3127", "short": "3030ece", "msg": "Initial commit", "dep_only": false, "snapshots2": {"windows": {"have": 0, "total": 98}, "linux": {"have": 0, "total": 98}}}];
     var REPO = "MIpetrov-NI/niflexlogger-plugins";
     var BRANCH = "main";
@@ -2092,7 +2092,7 @@
   </script>
   <main class="lvci-main">
   <h1>CI Dashboard — niflexlogger-plugins</h1>
-  <div class="sub">Last updated: 2026-09-17 19:24 UTC &nbsp;|&nbsp; Auto-refreshes every 15 min</div>
+  <div class="sub">Last updated: 2026-09-17 19:54 UTC &nbsp;|&nbsp; Live — refreshing every 60 s while CI runs</div>
   <div class="nav">
     <a href="https://github.com/MIpetrov-NI/niflexlogger-plugins">GitHub</a>
     <a href="https://github.com/MIpetrov-NI/niflexlogger-plugins/actions">Actions</a>
@@ -2143,6 +2143,46 @@
         <div class="cidash-rev-wrap">
           <span class="cidash-avatar" style="background:hsl(238,42%,45%)" title="Milena" aria-hidden="true">M</span>
           <div class="cidash-rev-body">
+            <div class="cidash-rev-line1"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=6ce5ddb48e518548993bb7ee5d66a049485412ae" class="cidash-rev-msg" title="Merge pull request #4 from MIpetrov-NI/test/linux-sbom-dashboard">Merge pull request #4 from MIpetrov-NI/test/linux-sbom-dashboard</a></div>
+            <div class="cidash-rev-meta"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=6ce5ddb48e518548993bb7ee5d66a049485412ae" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">6ce5ddb</a><span class="cidash-rev-dot">&middot;</span>Milena<span class="cidash-rev-dot">&middot;</span>2026-09-17</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="6ce5ddb48e518548993bb7ee5d66a049485412ae" data-parent="eb0ced65df206ed403d241a5ea6fbfb367b0f6f9" data-short="6ce5ddb" title="Run SBOM Generation for commit 6ce5ddb">&#9655;</a></td>
+    </tr>
+
+    <tr data-project="false" data-deponly="false">
+      <td class="cidash-rev">
+        <div class="cidash-rev-wrap">
+          <span class="cidash-avatar" style="background:hsl(298,42%,45%)" title="MIpetrov-NI" aria-hidden="true">M</span>
+          <div class="cidash-rev-body">
+            <div class="cidash-rev-line1"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=05a6f81e227e253fb36923102825230ca0a6ba9e" class="cidash-rev-msg" title="Test Linux SBOM dashboard integration">Test Linux SBOM dashboard integration</a></div>
+            <div class="cidash-rev-meta"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=05a6f81e227e253fb36923102825230ca0a6ba9e" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">05a6f81</a><span class="cidash-rev-dot">&middot;</span>MIpetrov-NI<span class="cidash-rev-dot">&middot;</span>2026-09-17</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="05a6f81e227e253fb36923102825230ca0a6ba9e" data-parent="eb0ced65df206ed403d241a5ea6fbfb367b0f6f9" data-short="05a6f81" title="Run SBOM Generation for commit 05a6f81">&#9655;</a></td>
+    </tr>
+
+    <tr data-project="false" data-deponly="false">
+      <td class="cidash-rev">
+        <div class="cidash-rev-wrap">
+          <span class="cidash-avatar" style="background:hsl(238,42%,45%)" title="Milena" aria-hidden="true">M</span>
+          <div class="cidash-rev-body">
             <div class="cidash-rev-line1"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=eb0ced65df206ed403d241a5ea6fbfb367b0f6f9" class="cidash-rev-msg" title="Merge pull request #3 from MIpetrov-NI/test/sbom-dashboard-integration">Merge pull request #3 from MIpetrov-NI/test/sbom-dashboard-integration</a></div>
             <div class="cidash-rev-meta"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=eb0ced65df206ed403d241a5ea6fbfb367b0f6f9" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">eb0ced6</a><span class="cidash-rev-dot">&middot;</span>Milena<span class="cidash-rev-dot">&middot;</span>2026-09-17</div>
           </div>
@@ -2155,7 +2195,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="eb0ced65df206ed403d241a5ea6fbfb367b0f6f9" data-parent="4289c818550a69924facd609727ad5a394bba7d1" data-short="eb0ced6" title="Run SBOM Generation for commit eb0ced6">&#9655;</a></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2175,7 +2215,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="e87fc5259dbcbbd284b3ef7c4f2471f2ef89d276" data-parent="4289c818550a69924facd609727ad5a394bba7d1" data-short="e87fc52" title="Run SBOM Generation for commit e87fc52">&#9655;</a></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2195,7 +2235,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="4289c818550a69924facd609727ad5a394bba7d1" data-parent="e536c0e23e7aeae1c560feb44701820f25d449db" data-short="4289c81" title="Run SBOM Generation for commit 4289c81">&#9655;</a></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2215,7 +2255,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="e536c0e23e7aeae1c560feb44701820f25d449db" data-parent="5157341c1461717c7f7d072c8971d26479f39d47" data-short="e536c0e" title="Run SBOM Generation for commit e536c0e">&#9655;</a></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2235,7 +2275,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="5157341c1461717c7f7d072c8971d26479f39d47" data-parent="842f11f57319d2b99d2cb932253b22693ea38582" data-short="5157341" title="Run SBOM Generation for commit 5157341">&#9655;</a></td>
     </tr>
 
     <tr data-project="true" data-deponly="false">
@@ -2255,7 +2295,7 @@
       <td style="text-align:center"><a href="#" class="cidash-run" data-cap="unit-tests" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" title="Run Unit Tests for commit 842f11f">&#9655;</a></td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center"><a href="#" class="cidash-run" data-cap="builds" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" title="Run Builds for commit 842f11f">&#9655;</a></td>
-      <td style="text-align:center" class="cidash-cap-cell" data-cap="sbom-generation" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-ts="2026-09-17T19:23:18Z"><span class="cidash-chip cc-pass"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L1.22 9.28a.75.75 0 1 1 1.06-1.06L6 11.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/report/index.html?type=sbom-report&sha=842f11f57319d2b99d2cb932253b22693ea38582&short=842f11f&src=..%2Fsbom%2F842f11f57319d2b99d2cb932253b22693ea38582%2Findex.html&title=SBOM%20%C2%B7%20842f11f" style="color:inherit">SBOM</a></span></td>
+      <td style="text-align:center" class="cidash-cap-cell" data-cap="sbom-generation" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-ts="2026-09-17T19:54:17Z"><span class="cidash-chip cc-split" title="Windows / Linux SBOM status"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/report/index.html?type=sbom-report&sha=842f11f57319d2b99d2cb932253b22693ea38582&short=842f11f&src=..%2Fsbom%2F842f11f57319d2b99d2cb932253b22693ea38582%2Findex.html&title=SBOM%20%C2%B7%20842f11f" style="color:inherit"><span class="cidash-vseg cc-pass" data-tip="Windows: success">W</span></a><span class="cidash-vseg-sep">/</span><a href="https://github.com/MIpetrov-NI/niflexlogger-plugins/actions/runs/35267612816" style="color:inherit"><span class="cidash-vseg cc-warn" data-tip="Linux: running">L</span></a></span></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2275,7 +2315,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-parent="ab13f856cd03fac9e3685633b6fbbee26314c61e" data-short="cedd13d" title="Run SBOM Generation for commit cedd13d">&#9655;</a></td>
     </tr>
 
     <tr data-project="true" data-deponly="false">
@@ -2315,7 +2355,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="31562ee2bd41693c60d845db3e1883f55601c31c" data-parent="80342ffab5f8705709e53a50a5c68c2bfe394664" data-short="31562ee" title="Run SBOM Generation for commit 31562ee">&#9655;</a></td>
     </tr>
 
     <tr data-project="true" data-deponly="false">
@@ -2355,7 +2395,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="fcdf1b96558fed05c154bf8b58162b34653d4a74" data-parent="3206ff3b614a958e3ee067e0d1a1e8ec099dd118" data-short="fcdf1b9" title="Run SBOM Generation for commit fcdf1b9">&#9655;</a></td>
     </tr>
 
     <tr data-project="true" data-deponly="false">
@@ -2435,7 +2475,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="217290bf5cd988b79f4598e5961e3d00b442ad40" data-parent="5f01b04b2cec924c2927461288dde045ab02fb34" data-short="217290b" title="Run SBOM Generation for commit 217290b">&#9655;</a></td>
     </tr>
 
     <tr data-project="true" data-deponly="false">
@@ -2475,7 +2515,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="b3c3bbe7318e571f508decf5af46a9bd21547e70" data-parent="f8be0ec617e3134024a0aa50b1a05fefca1a1977" data-short="b3c3bbe" title="Run SBOM Generation for commit b3c3bbe">&#9655;</a></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2495,7 +2535,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="2cc13f8394dff2a3b8d40b708a2b2b733da23feb" data-parent="8598080bd929be4246ad768b815e0e65c42cddcc" data-short="2cc13f8" title="Run SBOM Generation for commit 2cc13f8">&#9655;</a></td>
     </tr>
 
     <tr data-project="false" data-deponly="false">
@@ -2515,7 +2555,7 @@
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center"><a href="#" class="cidash-run" data-cap="sbom-generation" data-sha="f8be0ec617e3134024a0aa50b1a05fefca1a1977" data-parent="b5b3a7160fea1bb03a6ca169b6b7cd35ead82465" data-short="f8be0ec" title="Run SBOM Generation for commit f8be0ec">&#9655;</a></td>
     </tr>
 
     <tr data-project="true" data-deponly="false">

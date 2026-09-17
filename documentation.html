@@ -1900,21 +1900,26 @@ docker exec &lt;name&gt; powershell -File C:\ops\render-snapshots.ps1 ...   # pe
       <h4>At a glance</h4>
       <table>
         <tbody>
-          <tr><th>Driver</th><td><code>.github/labview/run-sbom-generation.ps1</code> <span class="pill win">Windows</span></td></tr>
+          <tr><th>Drivers</th><td><code>.github/labview/run-sbom-generation.ps1</code> <span class="pill win">Windows</span><br><code>.github/labview/run-sbom-generation.sh</code> <span class="pill lin">Linux</span></td></tr>
           <tr><th>Report builder</th><td><code>.github/labview/build-sbom-report.py</code></td></tr>
-          <tr><th>Workflow</th><td><code>generate-sbom-windows-container.yml</code> <span class="pill win">windows-2022</span></td></tr>
-          <tr><th>Output &amp; status</th><td><code>sbom/&lt;sha&gt;/</code>; commit status <code>CI / SBOM Generation</code></td></tr>
+          <tr><th>Workflows</th><td><code>generate-sbom-windows-container.yml</code> <span class="pill win">windows-2022</span><br><code>generate-sbom-linux-container.yml</code> <span class="pill lin">ubuntu-latest</span></td></tr>
+          <tr><th>Output &amp; status</th><td><code>sbom/&lt;sha&gt;/</code>; <code>CI / SBOM Generation</code> <span class="pill win">Windows</span><br><code>sbom/&lt;sha&gt;/linux/</code>; <code>CI / SBOM Generation (Linux)</code> <span class="pill lin">Linux</span></td></tr>
         </tbody>
       </table>
-      <p>The Windows worker invokes the VIPM CLI to inventory the revision&rsquo;s resolved LabVIEW package
-        dependencies and preserves its native CycloneDX document at
-        <code>sbom/&lt;sha&gt;/results/sbom.json</code>. The host report builder normalises that inventory into
-        <code>results.json</code> and a navigable <code>index.html</code>, then the workflow uploads the whole
-        directory as an Actions artifact and publishes it to GitHub Pages.</p>
+      <p>Each worker invokes its native VIPM CLI to inventory the revision&rsquo;s resolved LabVIEW package
+        dependencies. The Windows PowerShell driver and Linux Bash driver both locate the first non-tooling
+        <code>.lvproj</code>, launch the installed LabVIEW under the worker&rsquo;s headless display, request a
+        CycloneDX 1.5 document, and fail if VIPM does not produce a valid nonempty result. The native documents are
+        preserved at <code>sbom/&lt;sha&gt;/results/sbom.json</code> on Windows and
+        <code>sbom/&lt;sha&gt;/linux/results/sbom.json</code> on Linux. The host report builder normalises each
+        inventory into a sibling <code>results.json</code> and navigable <code>index.html</code>; each workflow also
+        uploads its report as an Actions artifact before publishing it to GitHub Pages.</p>
       <p>The dashboard has a per-revision <strong>SBOM</strong> column. Its status pill links to the Pages report
         inside the shared report viewer; the viewer&rsquo;s <strong>CycloneDX JSON</strong> action opens the native
-        machine-readable document. Empty cells can dispatch SBOM generation for that revision, and SBOM participates
-        in Populate history, the activity switcher, revision navigation, and regeneration controls. Historical
+        machine-readable document. The report&rsquo;s Windows/Linux selector opens the other platform&rsquo;s
+        report when it exists; if it has not been published yet, the standard missing-report page offers to run it. Empty cells can
+        dispatch either platform for that revision, and SBOM participates in Populate history, the activity switcher,
+        revision navigation, and regeneration controls. Historical
         <code>CI / SBOM</code> statuses remain readable, while new runs use the catalog-declared
         <code>CI / SBOM Generation</code> context.</p>
 
@@ -1933,6 +1938,8 @@ docker exec &lt;name&gt; powershell -File C:\ops\render-snapshots.ps1 ...   # pe
           <tr><td><code>builds/&lt;sha&gt;/summary.json</code></td><td>Builds report builder</td><td>Dashboard cell (succeeded/failed split) + report</td></tr>
           <tr><td><code>sbom/&lt;sha&gt;/results.json</code></td><td>SBOM report builder</td><td>Dashboard report availability + HTML report</td></tr>
           <tr><td><code>sbom/&lt;sha&gt;/results/sbom.json</code></td><td>VIPM CLI</td><td>Native CycloneDX download</td></tr>
+          <tr><td><code>sbom/&lt;sha&gt;/linux/results.json</code></td><td>SBOM report builder (Linux)</td><td>Dashboard report availability + HTML report</td></tr>
+          <tr><td><code>sbom/&lt;sha&gt;/linux/results/sbom.json</code></td><td>VIPM CLI (Linux)</td><td>Native CycloneDX download</td></tr>
           <tr><td><code>vi-snapshots/&lt;sha&gt;/manifest.json</code></td><td>Snapshot gallery builder</td><td>VI Browser</td></tr>
           <tr><td><code>dependencies/index.json</code></td><td>Dashboard publisher</td><td>Dependencies page install-time inventory</td></tr>
           <tr><td><code>workers/&lt;platform&gt;/&lt;version&gt;/manifest.json</code></td><td>Worker image workflows</td><td>Dependencies page installed-package status</td></tr>
