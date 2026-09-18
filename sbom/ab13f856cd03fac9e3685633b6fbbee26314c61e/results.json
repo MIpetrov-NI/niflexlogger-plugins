@@ -1,0 +1,47 @@
+{
+ "meta": {
+  "sha": "ab13f856cd03fac9e3685633b6fbbee26314c61e",
+  "short": "ab13f85",
+  "platform": "windows",
+  "repo": "MIpetrov-NI/niflexlogger-plugins",
+  "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins",
+  "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/",
+  "labview_version": "2026",
+  "commit": {
+   "message": "[Tachometer Processing] Fix #26 by adding state to class data (#27)",
+   "author": "Doug Bendele",
+   "date": "2026-05-21T16:20:41-05:00"
+  },
+  "generated_utc": "2026-09-18 22:46 UTC",
+  "spdx_version": "CycloneDX 1.5",
+  "created": ""
+ },
+ "summary": {
+  "total_packages": 2
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": "linux/results.json"
+  }
+ ],
+ "packages": [
+  {
+   "name": "ni-labview-2026-coreother",
+   "version": "26.1.2.49158-0+f6",
+   "vendor": "National Instruments"
+  },
+  {
+   "name": "ni-labview-2026-vilib",
+   "version": "26.1.2.49158-0+f6",
+   "vendor": "National Instruments"
+  }
+ ],
+ "tooling": {
+  "missing": []
+ }
+}
