@@ -107,7 +107,7 @@ def build_data(args) -> dict:
             meta_extra = {}
 
     if args.platform == "windows":
-        platforms = [{"id": "windows", "url": None}, {"id": "linux", "url": "linux/results.json"}]
+        platforms = [{"id": "windows", "url": None}, {"id": "linux", "url": None}]
         snap_depth = "../../"
     else:
         platforms = [{"id": "windows", "url": "../results.json"}, {"id": "linux", "url": None}]
@@ -181,22 +181,6 @@ def tooling_banner_html(missing: list, configure_url: str) -> str:
     )
 
 
-def platform_limitations_banner_html(platform: str) -> str:
-    if platform != "linux":
-        return ""
-    return (
-        '<div class="lvci-needtool" role="note">'
-        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
-        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
-        '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>'
-        '<line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
-        '<div class="lvci-needtool-t"><strong>Linux package discovery</strong>'
-        'VIPM discovers VI packages, while the Linux worker maps referenced LabVIEW files to their '
-        'owning Debian packages with dpkg-query. Linux package names and versions can differ from '
-        'the corresponding Windows NIPM components.</div></div>'
-    )
-
-
 def render(data: dict) -> str:
     blob = json.dumps(data, ensure_ascii=False)
     blob = blob.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
@@ -217,7 +201,6 @@ def render(data: dict) -> str:
     repo = m.get("repo") or ""
     cfg_url = (dash or "") + "configure.html" + ("?repo=" + quote(repo, safe="") if repo else "")
     banner = tooling_banner_html((data.get("tooling") or {}).get("missing") or [], cfg_url)
-    banner += platform_limitations_banner_html(m.get("platform", "windows"))
 
     out = _TEMPLATE.replace("__SBOM_DATA_JSON__", blob)
     out = out.replace("__SBOM_HEADER_CFG__", json.dumps(hdr_cfg, ensure_ascii=False))
@@ -354,16 +337,17 @@ function renderToggle(){
   host.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>switchPlatform(b.dataset.plat)));
 }
 
-function switchPlatform(pid){
+async function switchPlatform(pid){
   if(pid===CUR) return;
   const p = PLATFORMS.find(x=>x.id===pid); if(!p) return;
-  if(p.url==null) return;
-  const suffix = pid==='linux' ? '/linux' : '';
-  const report = `${META.pages_url}/sbom/${META.sha}${suffix}/index.html`;
-  if(window.top===window.self){ window.location.href=report; return; }
-  const src = `../sbom/${META.sha}${suffix}/index.html`;
-  const title = `SBOM \u00b7 ${(META.short||META.sha||'').slice(0,7)}`;
-  window.top.location.href = `${META.pages_url}/report/index.html?type=sbom-report&sha=${encodeURIComponent(META.sha)}&short=${encodeURIComponent(META.short||'')}&platform=${encodeURIComponent(pid)}&src=${encodeURIComponent(src)}&title=${encodeURIComponent(title)}`;
+  let data = CACHE[pid];
+  if(data===undefined){
+    try{ data = await fetch(p.url).then(r=>r.json()); }catch(e){ data = null; }
+    CACHE[pid] = data;
+  }
+  CUR = pid;
+  if(!data){ renderToggle(); showEmpty(pid); return; }
+  D = data; renderToggle(); renderAll();
 }
 
 function showEmpty(pid){

@@ -11,7 +11,6 @@
     "templates/masscompile-linux.yml",
     "templates/masscompile-windows.yml",
     "templates/pages.yml",
-    "templates/sbom-linux.yml",
     "templates/sbom-windows.yml",
     "templates/snapshots-2-linux.yml",
     "templates/snapshots-2-windows.yml",
@@ -51,8 +50,7 @@
       "windows": "templates/antidoc-windows.yml"
     },
     "sbom-generation": {
-      "windows": "templates/sbom-windows.yml",
-      "linux": "templates/sbom-linux.yml"
+      "windows": "templates/sbom-windows.yml"
     },
     "builds": {
       "windows": "templates/builds-windows.yml",
