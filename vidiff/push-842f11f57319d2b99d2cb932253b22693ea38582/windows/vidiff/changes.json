@@ -1,0 +1,45 @@
+{
+  "platform": "windows",
+  "files": [
+    {
+      "file": "PDK plugins/Tone Measurements/source/Check for Tone.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Check_for_Tone.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Cleanup Session.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Cleanup_Session.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Configure Session.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Configure_Session.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Finalize.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Finalize.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Initialize.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Initialize.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Process.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Process.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Single Tone Measurements.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Single_Tone_Measurements.vi/index.html"
+    },
+    {
+      "file": "PDK plugins/Tone Measurements/source/Tone Frequency to Measurement Duration.vi",
+      "type": "added",
+      "report": "PDK_plugins-Tone_Measurements-source-Tone_Frequency_to_Measurement_Duration.vi/index.html"
+    }
+  ]
+}
