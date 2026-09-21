@@ -1,10 +1,10 @@
-LabVIEWCLI started logging in file:  /tmp/lvtemporary_717603.log
+LabVIEWCLI started logging in file:  /tmp/lvtemporary_135312.log
 Using LabVIEW: "/usr/local/natinst/LabVIEW-2026-64/labviewprofull"
 LabVIEW launched successfully.
 Connection established with LabVIEW at port number 3363.
 
 Operation output: 
-#### Starting Mass Compile: Mon, Sep 21, 2026 08:59:55 AM
+#### Starting Mass Compile: Mon, Sep 21, 2026 10:39:55 AM
   Directory: "/workspace"
 /workspace/.github/labview/PrintToSingleFileHtml/PrintToSingleFileHtml.lvclass (PrintToSingleFileHtml.lvclass)
     - The class expected to be at "/workspace/.github/labview/CoreOperation/CoreOperation.lvclass" was loaded from "/usr/local/natinst/share/nilvcli/Operations/CoreOperation/CoreOperation.lvclass".
@@ -461,7 +461,7 @@ CompileFile: error 74 at /workspace/PDK plugins/Waterfall/build/Waterfall/Waterf
   ### Bad VI:    "Waterfall.lvlib:Waterfall.lvclass:Cleanup Session.vi"	Path="/workspace/PDK plugins/Waterfall/source/Cleanup Session.vi" 
   ### Bad VI:    "Waterfall.lvlib:Waterfall.lvclass:Finalize.vi"	Path="/workspace/PDK plugins/Waterfall/source/Finalize.vi" 
   ### Bad VI:    "Waterfall.lvlib:Waterfall.lvclass:Handle Notification.vi"	Path="/workspace/PDK plugins/Waterfall/source/Handle Notification.vi" 
-#### Finished Mass Compile: Mon, Sep 21, 2026 09:00:35 AM
+#### Finished Mass Compile: Mon, Sep 21, 2026 10:40:35 AM
 
 MassCompile operation failed.
 
