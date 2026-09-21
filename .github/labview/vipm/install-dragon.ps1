@@ -1,15 +1,23 @@
 $ErrorActionPreference = 'Stop'
 
-$dragonFiles = @(Get-ChildItem -Path 'C:\vipm' -Filter '*.dragon' -Recurse -File)
-if ($dragonFiles.Count -eq 0) {
-    throw 'No Dragon dependency files were staged in C:\vipm.'
+$nipkg = Get-Command nipkg -ErrorAction Stop
+$feedName = 'ni-flexlogger-pdk-2026-q3'
+$feedUrl = 'https://download.ni.com/support/nipkg/products/ni-f/ni-flexlogger-plugin-development-kit/26.5/released'
+$package = 'ni-flexlogger-plugin-development-kit=26.5.0.49720-0+f568'
+
+& $nipkg.Source feed-add --name=$feedName $feedUrl
+if ($LASTEXITCODE -ne 0) {
+    throw "NIPM failed to add the '$feedName' feed with exit code $LASTEXITCODE."
 }
 
-foreach ($dragonFile in $dragonFiles) {
-    & dragon apply $dragonFile.FullName
-    if ($LASTEXITCODE -ne 0) {
-        throw "Dragon failed to apply '$($dragonFile.Name)' with exit code $LASTEXITCODE."
-    }
+& $nipkg.Source update $feedName
+if ($LASTEXITCODE -ne 0) {
+    throw "NIPM failed to update the '$feedName' feed with exit code $LASTEXITCODE."
+}
+
+& $nipkg.Source install --accept-eulas --assume-yes $package
+if ($LASTEXITCODE -ne 0) {
+    throw "NIPM failed to install '$package' with exit code $LASTEXITCODE."
 }
 
 $pluginSdk = 'C:\Program Files\National Instruments\LabVIEW 2026\vi.lib\FlexLogger\SDK\PluginSDK.lvlibp'
