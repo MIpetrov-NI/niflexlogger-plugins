@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "71f1ff36aedc709b5bc8b935a092a0a1c5977c64",
+  "sha": "8f5d7c0f52a513952525df1c3d4c893975558084",
   "revisions": [
+    {
+      "sha": "8f5d7c0f52a513952525df1c3d4c893975558084",
+      "short": "8f5d7c0",
+      "message": "Install FlexLogger PDK through NIPM",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-21T11:22:19Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "71f1ff36aedc709b5bc8b935a092a0a1c5977c64",
       "short": "71f1ff3",
