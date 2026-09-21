@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "d5330fb1153886206fb7a6883a0dd9f4ab63aada",
+  "sha": "71f1ff36aedc709b5bc8b935a092a0a1c5977c64",
   "revisions": [
+    {
+      "sha": "71f1ff36aedc709b5bc8b935a092a0a1c5977c64",
+      "short": "71f1ff3",
+      "message": "Honor monitored container dependencies",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-21T10:14:13Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "d5330fb1153886206fb7a6883a0dd9f4ab63aada",
       "short": "d5330fb",
