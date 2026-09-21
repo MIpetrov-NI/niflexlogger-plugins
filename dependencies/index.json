@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7",
+  "sha": "d5330fb1153886206fb7a6883a0dd9f4ab63aada",
   "revisions": [
+    {
+      "sha": "d5330fb1153886206fb7a6883a0dd9f4ab63aada",
+      "short": "d5330fb",
+      "message": "Bake FlexLogger PDK into CI worker",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-21T10:04:32Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7",
       "short": "8b0d3fa",
@@ -350,9 +359,17 @@
     "use": "",
     "actions": {},
     "vipc": [],
-    "dragon": [],
+    "dragon": [
+      {
+        "path": "FlexLogger-Dependencies.dragon",
+        "monitor": true,
+        "monitorOn": [
+          "windows"
+        ]
+      }
+    ],
     "hasVipcList": false,
-    "hasDragonList": false
+    "hasDragonList": true
   },
   "vipc": [
     {
@@ -468,12 +485,18 @@
     }
   ],
   "dragon": {
-    "available": false,
+    "available": true,
     "column": "windows",
-    "ready": false,
+    "ready": true,
     "health": "",
-    "manifest_version": "",
-    "files": [],
+    "manifest_version": "win-c02e040511e4",
+    "files": [
+      {
+        "source_file": "FlexLogger-Dependencies.dragon",
+        "dependencies": [],
+        "monitored": true
+      }
+    ],
     "install_set": [],
     "conflicts": []
   },
