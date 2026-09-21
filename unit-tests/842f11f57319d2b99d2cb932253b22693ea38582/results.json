@@ -1,0 +1,71 @@
+{
+ "meta": {
+  "sha": "842f11f57319d2b99d2cb932253b22693ea38582",
+  "short": "842f11f",
+  "platform": "windows",
+  "repo": "MIpetrov-NI/niflexlogger-plugins",
+  "pages_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins",
+  "snap_base": "https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/",
+  "dash_url": "https://MIpetrov-NI.github.io/niflexlogger-plugins/",
+  "labview_version": "2026",
+  "tools": [],
+  "commit": {
+   "message": "Add Tone Measurements Plugin (#28)",
+   "author": "Doug Bendele",
+   "date": "2026-07-02T15:01:56-05:00"
+  },
+  "generated_utc": "2026-09-21 08:39 UTC"
+ },
+ "summary": {
+  "tests": 0,
+  "passed": 0,
+  "failed": 0,
+  "errored": 0,
+  "skipped": 0,
+  "percent": 0,
+  "status": "empty",
+  "duration": 0.0
+ },
+ "status_order": [
+  "failed",
+  "error",
+  "skipped",
+  "passed"
+ ],
+ "status_meta": {
+  "failed": {
+   "label": "Failed",
+   "color": "#da3633",
+   "blurb": "An assertion failed."
+  },
+  "error": {
+   "label": "Errored",
+   "color": "#bb8009",
+   "blurb": "The test raised an unexpected error."
+  },
+  "skipped": {
+   "label": "Skipped",
+   "color": "#6e7681",
+   "blurb": "The test was skipped."
+  },
+  "passed": {
+   "label": "Passed",
+   "color": "#2ea043",
+   "blurb": "The test passed."
+  }
+ },
+ "platforms": [
+  {
+   "id": "windows",
+   "url": null
+  },
+  {
+   "id": "linux",
+   "url": "linux/results.json"
+  }
+ ],
+ "suites": [],
+ "tooling": {
+  "missing": []
+ }
+}
