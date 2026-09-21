@@ -1,8 +1,17 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "8f5d7c0f52a513952525df1c3d4c893975558084",
+  "sha": "50965cf6c8089864f46ce5500d6d6431329dc1f4",
   "revisions": [
+    {
+      "sha": "50965cf6c8089864f46ce5500d6d6431329dc1f4",
+      "short": "50965cf",
+      "message": "Validate installed FlexLogger SDK file",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-21T22:00:45Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "8f5d7c0f52a513952525df1c3d4c893975558084",
       "short": "8f5d7c0",
@@ -507,7 +516,7 @@
     "column": "windows",
     "ready": true,
     "health": "",
-    "manifest_version": "win-c02e040511e4",
+    "manifest_version": "win-6e0405c2fd17",
     "files": [
       {
         "source_file": "FlexLogger-Dependencies.dragon",
@@ -579,7 +588,9 @@
         "astemes_lib_lunit_test_inheritance_add_on",
         "astemes_lib_lunit_test_inheritance_add_on-1.0.5.4",
         "astemes_lib_lunit_test_inheritance_add_on-v1.0.5.4",
+        "dataflow_g_lib_g_image",
         "dataflow_g_lib_g_image-0.5.0.1",
+        "dataflow_g_lib_g_image-v0.5.0.1",
         "felipefoz_lib_lv_rainbow_terminal",
         "felipefoz_lib_lv_rainbow_terminal-1.1.1.5",
         "felipefoz_lib_lv_rainbow_terminal-v1.1.1.5",
@@ -636,14 +647,16 @@
         "sas_workshops_lib_lunit_for_g_cli",
         "sas_workshops_lib_lunit_for_g_cli-1.2.1.85",
         "sas_workshops_lib_lunit_for_g_cli-v1.2.1.85",
-        "wiresmith_technology_lib_g_cli-3.0.1.98"
+        "wiresmith_technology_lib_g_cli",
+        "wiresmith_technology_lib_g_cli-3.0.1.98",
+        "wiresmith_technology_lib_g_cli-v3.0.1.98"
       ],
       "failed_packages": [],
       "nipkg_ready": true,
       "nipkg_packages": [
         {
           "name": "eula-jki-vimp",
-          "version": "26.0.0.49245-0+f93"
+          "version": "26.5.0.49245-0+f93"
         },
         {
           "name": "eula-ms-dotnet-4.8",
@@ -676,6 +689,10 @@
         {
           "name": "eula-ms-dotnet-4.8",
           "version": "26.3.0.49236-0+f84"
+        },
+        {
+          "name": "eula-ms-dotnet-4.8",
+          "version": "26.5.0.49245-0+f93"
         },
         {
           "name": "eula-ni-standard",
@@ -823,7 +840,7 @@
         },
         {
           "name": "jki-dragon",
-          "version": "2026.1.0-828"
+          "version": "2026.3.0-897"
         },
         {
           "name": "mgi-solution-explorer",
@@ -835,119 +852,75 @@
         },
         {
           "name": "ni-aspt-labview-support",
-          "version": "25.4.0.49197-0+f45"
+          "version": "26.3.0.49249-0+f97"
         },
         {
           "name": "ni-assistant-framework",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-assistant-framework-custom-ui-tool",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework-custom-ui-tool",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-assistant-framework-labview-2023-support",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework-labview-2023-support",
-          "version": "26.1.2.49158-0+f6"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2023-x86-support",
-          "version": "26.1.0.49906-0+f754"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2023-x86-support",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-assistant-framework-labview-2024-support",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework-labview-2024-support",
-          "version": "26.1.2.49158-0+f6"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2024-x86-support",
-          "version": "26.1.0.49906-0+f754"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2024-x86-support",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-assistant-framework-labview-2025-support",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework-labview-2025-support",
-          "version": "26.1.2.49158-0+f6"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2025-x86-support",
-          "version": "26.1.0.49906-0+f754"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2025-x86-support",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-assistant-framework-labview-2026-codegen-support",
-          "version": "26.1.0.49906-0+f754"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2026-codegen-support",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.0.49791-0+f639"
         },
         {
           "name": "ni-assistant-framework-labview-2026-support",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework-labview-2026-support",
-          "version": "26.1.2.49158-0+f6"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2026-x86-support",
-          "version": "26.1.0.49906-0+f754"
-        },
-        {
-          "name": "ni-assistant-framework-labview-2026-x86-support",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-assistant-framework-ui-assemblies",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-assistant-framework-ui-assemblies",
-          "version": "26.1.2.49158-0+f6"
-        },
-        {
-          "name": "ni-assistant-framework-x86",
-          "version": "26.1.0.49906-0+f754"
-        },
-        {
-          "name": "ni-assistant-framework-x86",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-auth",
-          "version": "26.1.0.49284-0+f132"
+          "version": "26.5.0.49329-0+f177"
         },
         {
           "name": "ni-ceip",
-          "version": "26.0.0.49235-0+f83"
+          "version": "26.5.0.49222-0+f70"
         },
         {
           "name": "ni-ceip",
@@ -955,7 +928,7 @@
         },
         {
           "name": "ni-ceip-common",
-          "version": "26.0.0.49235-0+f83"
+          "version": "26.5.0.49222-0+f70"
         },
         {
           "name": "ni-ceip-common",
@@ -963,7 +936,7 @@
         },
         {
           "name": "ni-ceip-x86",
-          "version": "26.0.0.49235-0+f83"
+          "version": "26.5.0.49222-0+f70"
         },
         {
           "name": "ni-ceip-x86",
@@ -1035,27 +1008,27 @@
         },
         {
           "name": "ni-codesignapi",
-          "version": "26.0.0.49245-0+f93"
+          "version": "26.5.0.49246-0+f94"
         },
         {
           "name": "ni-curl",
-          "version": "26.0.0.49170-0+f18"
+          "version": "26.5.0.49176-0+f24"
         },
         {
           "name": "ni-curl",
           "version": "25.0.0.49165-0+f13"
         },
         {
-          "name": "ni-cvi-2020-reflector",
-          "version": "20.0.0.49154-0+f2"
+          "name": "ni-cvi-2026-reflector",
+          "version": "26.3.0.49416-0+f264"
         },
         {
           "name": "ni-cvi-activex",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49415-0+f263"
         },
         {
           "name": "ni-cvi-analysis",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49419-0+f267"
         },
         {
           "name": "ni-cvi-codegen",
@@ -1063,19 +1036,19 @@
         },
         {
           "name": "ni-cvi-datasocket",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-dotnet",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49416-0+f264"
         },
         {
           "name": "ni-cvi-instrsup",
-          "version": "20.0.1.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-internet",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49415-0+f263"
         },
         {
           "name": "ni-cvi-labview-dll-builder-15.1.0",
@@ -1083,127 +1056,115 @@
         },
         {
           "name": "ni-cvi-network-variable",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-networkstreams",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49420-0+f268"
         },
         {
           "name": "ni-cvi-opengl",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-openmp",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49415-0+f263"
         },
         {
           "name": "ni-cvi-rte",
-          "version": "20.0.3.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-runtime-core",
-          "version": "20.0.3.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-runtime-engine",
-          "version": "20.0.3.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-runtime-realtime",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49425-0+f273"
         },
         {
           "name": "ni-cvi-tdms",
-          "version": "20.0.1.49154-0+f2"
+          "version": "26.3.0.49421-0+f269"
         },
         {
           "name": "ni-cvi-usi",
-          "version": "20.0.0.49154-0+f2"
+          "version": "26.3.0.49418-0+f266"
         },
         {
           "name": "ni-daqmx-labview-shared-docs",
-          "version": "26.0.0.49416-0+f264"
+          "version": "26.5.0.49603-0+f451"
         },
         {
           "name": "ni-data-store-service",
-          "version": "26.0.0.49285-0+f133"
+          "version": "26.5.0.49244-0+f92"
         },
         {
           "name": "ni-data-store-service-labview-support",
-          "version": "26.0.0.49285-0+f133"
-        },
-        {
-          "name": "ni-data-store-service-labview-support",
-          "version": "26.0.1.49154-0+f2"
+          "version": "26.5.0.49244-0+f92"
         },
         {
           "name": "ni-datafinder-client-api",
-          "version": "26.0.0.49245-0+f93"
+          "version": "26.5.0.49255-0+f103"
         },
         {
           "name": "ni-datafinder-desktop-quit-dc",
-          "version": "26.0.0.49242-0+f90"
+          "version": "26.5.0.49251-0+f99"
         },
         {
           "name": "ni-dataplugins-aop5",
-          "version": "26.0.0.49211-0+f59"
+          "version": "26.3.0.49217-0+f65"
         },
         {
           "name": "ni-dataplugins-python-host",
-          "version": "26.0.0.49242-0+f90"
+          "version": "26.5.0.49251-0+f99"
         },
         {
           "name": "ni-datasocket",
-          "version": "26.1.0.49308-0+f156"
+          "version": "26.3.0.49347-0+f195"
         },
         {
           "name": "ni-dct-labview-support",
-          "version": "26.0.0.49207-0+f55"
-        },
-        {
-          "name": "ni-dct-labview-support",
-          "version": "26.0.1.49154-0+f2"
+          "version": "26.3.0.49244-0+f92"
         },
         {
           "name": "ni-deployment-framework",
-          "version": "26.1.0.49904-0+f752"
+          "version": "26.3.0.49791-0+f639"
         },
         {
           "name": "ni-deployment-framework-x86",
-          "version": "26.1.0.49904-0+f752"
+          "version": "26.3.0.49791-0+f639"
         },
         {
           "name": "ni-dett-labview-support",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49250-0+f98"
         },
         {
           "name": "ni-dfc-labview-support",
-          "version": "26.0.0.49196-0+f44"
-        },
-        {
-          "name": "ni-dfc-labview-support",
-          "version": "26.0.1.49154-0+f2"
+          "version": "26.3.0.49232-0+f80"
         },
         {
           "name": "ni-dfdt-labview-support",
-          "version": "25.4.0.49210-0+f58"
+          "version": "26.3.0.49268-0+f116"
         },
         {
           "name": "ni-discovery-service",
-          "version": "26.0.0.49578-0+f426"
+          "version": "26.5.0.49706-0+f554"
         },
         {
           "name": "ni-distributed-system-manager-2026",
-          "version": "26.1.0.49908-0+f756"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-dotnetcore-interface",
-          "version": "26.1.0.49900-0+f748"
+          "version": "26.3.0.49790-0+f638"
         },
         {
           "name": "ni-dotnetcore-interface-x86",
-          "version": "26.1.0.49900-0+f748"
+          "version": "26.3.0.49790-0+f638"
         },
         {
           "name": "ni-error-report-x86",
@@ -1211,7 +1172,7 @@
         },
         {
           "name": "ni-error-reporting-common",
-          "version": "26.0.0.49566-0+f414"
+          "version": "26.5.0.49694-0+f542"
         },
         {
           "name": "ni-error-reporting-interface",
@@ -1223,15 +1184,15 @@
         },
         {
           "name": "ni-error-reporting-native",
-          "version": "26.0.0.49212-0+f60"
+          "version": "26.5.0.49216-0+f64"
         },
         {
           "name": "ni-error-reporting-native-x86",
-          "version": "26.0.0.49212-0+f60"
+          "version": "26.5.0.49216-0+f64"
         },
         {
           "name": "ni-euladepot",
-          "version": "26.0.0.49245-0+f93"
+          "version": "26.5.0.49245-0+f93"
         },
         {
           "name": "ni-euladepot",
@@ -1239,15 +1200,23 @@
         },
         {
           "name": "ni-example-finder",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-expat1-libs",
-          "version": "26.0.0.49173-0+f21"
+          "version": "26.5.0.49176-0+f24"
         },
         {
           "name": "ni-expat1-libs",
           "version": "25.0.0.49160-0+f8"
+        },
+        {
+          "name": "ni-flexlogger-pdk-offline-help",
+          "version": "26.5.0.49720-0+f568"
+        },
+        {
+          "name": "ni-flexlogger-plugin-development-kit",
+          "version": "26.5.0.49720-0+f568"
         },
         {
           "name": "ni-help-assistant",
@@ -1255,87 +1224,63 @@
         },
         {
           "name": "ni-help-launcher",
-          "version": "26.0.0.49202-0+f50"
+          "version": "26.5.0.49203-0+f51"
         },
         {
           "name": "ni-json-map",
-          "version": "26.1.0.49317-0+f165"
+          "version": "26.3.0.49369-0+f217"
         },
         {
           "name": "ni-labview-2025-nls-plugin",
-          "version": "25.8.1.49163-0+f11"
+          "version": "25.8.2.49163-0+f11"
         },
         {
           "name": "ni-labview-2026-core-en",
-          "version": "26.1.0.49909-0+f757"
+          "version": "26.3.0.49795-0+f643"
         },
         {
           "name": "ni-labview-2026-core-en",
-          "version": "26.1.1.49193-0+f41"
-        },
-        {
-          "name": "ni-labview-2026-core-en",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-labview-2026-coreother",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-coreother",
-          "version": "26.1.1.49193-0+f41"
-        },
-        {
-          "name": "ni-labview-2026-coreother",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-labview-2026-deployable-license",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-example",
-          "version": "26.1.0.49905-0+f753"
-        },
-        {
-          "name": "ni-labview-2026-example",
-          "version": "26.1.1.49193-0+f41"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-executable",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-executable",
-          "version": "26.1.1.49193-0+f41"
-        },
-        {
-          "name": "ni-labview-2026-executable",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-labview-2026-ff-runtime-engine",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-labview-2026-help-en",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-license",
-          "version": "26.1.0.49903-0+f751"
+          "version": "26.3.0.49791-0+f639"
         },
         {
           "name": "ni-labview-2026-manuals",
-          "version": "26.1.0.49905-0+f753"
-        },
-        {
-          "name": "ni-labview-2026-nls-plugin",
-          "version": "26.1.0.49447-0+f295"
-        },
-        {
-          "name": "ni-labview-2026-nls-plugin",
-          "version": "26.1.1.49188-0+f36"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-realtime-nbfifo",
@@ -1347,55 +1292,59 @@
         },
         {
           "name": "ni-labview-2026-runtime-engine",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-labview-2026-runtime-engine",
-          "version": "26.1.1.49193-0+f41"
-        },
-        {
-          "name": "ni-labview-2026-runtime-engine",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-labview-2026-runtime-engine-resource",
-          "version": "26.1.0.49908-0+f756"
+          "version": "26.3.0.49794-0+f642"
+        },
+        {
+          "name": "ni-labview-2026-runtime-engine-resource-x64",
+          "version": "26.3.0.49794-0+f642"
+        },
+        {
+          "name": "ni-labview-2026-runtime-engine-resource-x64",
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-labview-2026-runtime-engine-x86",
-          "version": "26.1.0.49908-0+f756"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-labview-2026-runtime-engine-x86",
-          "version": "26.1.1.49193-0+f41"
-        },
-        {
-          "name": "ni-labview-2026-runtime-engine-x86",
-          "version": "26.1.2.49158-0+f6"
+          "version": "26.3.1.49171-0+f19"
         },
         {
           "name": "ni-labview-2026-scripting-codegen",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-simulation-x64",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-vilib",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-labview-2026-vilib",
-          "version": "26.1.1.49193-0+f41"
+          "version": "26.3.1.49171-0+f19"
         },
         {
-          "name": "ni-labview-2026-vilib",
-          "version": "26.1.2.49158-0+f6"
+          "name": "ni-labview-2026q3-nls-plugin",
+          "version": "26.5.0.49361-0+f209"
+        },
+        {
+          "name": "ni-labview-2026q3-nls-plugin",
+          "version": "26.5.2.49163-0+f11"
         },
         {
           "name": "ni-labview-aspt-toolkit-lic",
-          "version": "25.4.0.49193-0+f41"
+          "version": "26.3.0.49247-0+f95"
         },
         {
           "name": "ni-labview-broker",
@@ -1407,63 +1356,51 @@
         },
         {
           "name": "ni-labview-command-line-interface-x86",
-          "version": "26.1.0.49328-0+f176"
+          "version": "26.3.0.49372-0+f220"
         },
         {
           "name": "ni-labview-database-toolkit-lic",
-          "version": "26.0.0.49206-0+f54"
+          "version": "26.3.0.49243-0+f91"
         },
         {
           "name": "ni-labview-database-toolkit-utility",
-          "version": "26.0.0.49205-0+f53"
+          "version": "26.3.0.49242-0+f90"
         },
         {
           "name": "ni-labview-datafinder-runtime",
-          "version": "26.0.0.49196-0+f44"
-        },
-        {
-          "name": "ni-labview-datafinder-runtime",
-          "version": "26.0.1.49154-0+f2"
-        },
-        {
-          "name": "ni-labview-datafinder-runtime-x86",
-          "version": "26.0.0.49196-0+f44"
-        },
-        {
-          "name": "ni-labview-datafinder-runtime-x86",
-          "version": "26.0.1.49154-0+f2"
+          "version": "26.3.0.49232-0+f80"
         },
         {
           "name": "ni-labview-dett",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49250-0+f98"
         },
         {
           "name": "ni-labview-dett-core",
-          "version": "25.1.0.49219-0+f67"
-        },
-        {
-          "name": "ni-labview-dett-labview-2022-support",
-          "version": "25.1.0.49219-0+f67"
-        },
-        {
-          "name": "ni-labview-dett-labview-2022-support-x86",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49250-0+f98"
         },
         {
           "name": "ni-labview-dett-labview-2023-support",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49249-0+f97"
         },
         {
           "name": "ni-labview-dett-labview-2023-support-x86",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49249-0+f97"
+        },
+        {
+          "name": "ni-labview-dett-labview-2024-support",
+          "version": "26.3.0.49249-0+f97"
+        },
+        {
+          "name": "ni-labview-dett-labview-2024-support-x86",
+          "version": "26.3.0.49249-0+f97"
         },
         {
           "name": "ni-labview-dett-lic",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49248-0+f96"
         },
         {
           "name": "ni-labview-dfd-toolkit-lic",
-          "version": "25.4.0.49203-0+f51"
+          "version": "26.3.0.49266-0+f114"
         },
         {
           "name": "ni-labview-max-xml",
@@ -1471,19 +1408,19 @@
         },
         {
           "name": "ni-labview-offline-manual-en",
-          "version": "26.1.0.49906-0+f754"
+          "version": "26.3.0.49793-0+f641"
         },
         {
           "name": "ni-labview-report-generation-toolkit-lic",
-          "version": "26.0.0.49203-0+f51"
+          "version": "26.3.0.49242-0+f90"
         },
         {
           "name": "ni-labview-system-state-publisher",
-          "version": "26.1.0.49902-0+f750"
+          "version": "26.3.0.49791-0+f639"
         },
         {
           "name": "ni-labview-unit-test-framework-toolkit-lic",
-          "version": "25.1.0.49239-0+f87"
+          "version": "26.3.0.49246-0+f94"
         },
         {
           "name": "ni-labview-unit-test-framework-toolkit-lic",
@@ -1491,19 +1428,19 @@
         },
         {
           "name": "ni-labview-vi-analyzer-toolkit-lic",
-          "version": "26.1.0.49206-0+f54"
+          "version": "26.3.0.49275-0+f123"
         },
         {
           "name": "ni-labview-vicompare",
-          "version": "26.1.0.49908-0+f756"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-labview-vimerge",
-          "version": "26.1.0.49908-0+f756"
+          "version": "26.3.0.49794-0+f642"
         },
         {
           "name": "ni-license-manager",
-          "version": "26.0.0.49257-0+f105"
+          "version": "26.5.0.49256-0+f104"
         },
         {
           "name": "ni-license-manager",
@@ -1511,7 +1448,7 @@
         },
         {
           "name": "ni-license-manager-compatibility-server",
-          "version": "26.0.0.49566-0+f414"
+          "version": "26.5.0.49698-0+f546"
         },
         {
           "name": "ni-license-manager-compatibility-server",
@@ -1526,76 +1463,84 @@
           "version": "26.1.0.49905-0+f753"
         },
         {
+          "name": "ni-lm-client-26.5",
+          "version": "26.3.0.49792-0+f640"
+        },
+        {
+          "name": "ni-lm-client-26.5-x86",
+          "version": "26.3.0.49792-0+f640"
+        },
+        {
           "name": "ni-lm-clr-compatibility-client",
-          "version": "26.1.0.49899-0+f747"
+          "version": "26.3.0.49789-0+f637"
         },
         {
           "name": "ni-lm-clr-compatibility-client-x86",
-          "version": "26.1.0.49899-0+f747"
+          "version": "26.3.0.49789-0+f637"
         },
         {
           "name": "ni-logos",
-          "version": "26.1.0.49283-0+f131"
+          "version": "26.5.0.49330-0+f178"
         },
         {
           "name": "ni-logos-labview-2026-support-en",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-logos-xt",
-          "version": "26.1.0.49283-0+f131"
+          "version": "26.5.0.49330-0+f178"
         },
         {
-          "name": "ni-lv-2026-ai-addon",
-          "version": "26.1.0.49447-0+f295"
+          "name": "ni-lv-2026q3-ai-addon",
+          "version": "26.5.0.49361-0+f209"
         },
         {
-          "name": "ni-lv-2026-ai-addon",
-          "version": "26.1.1.49188-0+f36"
+          "name": "ni-lv-2026q3-ai-addon",
+          "version": "26.5.2.49163-0+f11"
         },
         {
           "name": "ni-lv-ai-addon",
-          "version": "25.8.1.49163-0+f11"
+          "version": "25.8.2.49163-0+f11"
         },
         {
           "name": "ni-lv-web-server-labview-2026-runtime-engine-support",
-          "version": "26.1.0.49288-0+f136"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-lv-web-server-labview-2026-runtime-engine-x86-support",
-          "version": "26.1.0.49288-0+f136"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-lv-web-server-labview-2026-support",
-          "version": "26.1.0.49288-0+f136"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-lvaspt-offline-manual-en",
-          "version": "25.4.0.49196-0+f44"
+          "version": "26.3.0.49248-0+f96"
         },
         {
           "name": "ni-lvdct-offline-manual-en",
-          "version": "26.0.0.49207-0+f55"
+          "version": "26.3.0.49244-0+f92"
         },
         {
           "name": "ni-lvdett-offline-manual-en",
-          "version": "25.1.0.49219-0+f67"
+          "version": "26.3.0.49250-0+f98"
         },
         {
           "name": "ni-lvdfc-offline-manual-en",
-          "version": "26.0.0.49196-0+f44"
+          "version": "26.3.0.49232-0+f80"
         },
         {
           "name": "ni-lvdfdt-offline-manual-en",
-          "version": "25.4.0.49208-0+f56"
+          "version": "26.3.0.49267-0+f115"
         },
         {
           "name": "ni-lvrgt-offline-manual-en",
-          "version": "26.0.0.49204-0+f52"
+          "version": "26.3.0.49243-0+f91"
         },
         {
           "name": "ni-lvutf-offline-manual-en",
-          "version": "25.1.0.49239-0+f87"
+          "version": "26.3.0.49249-0+f97"
         },
         {
           "name": "ni-lvutf-offline-manual-en",
@@ -1603,31 +1548,31 @@
         },
         {
           "name": "ni-lvvia-offline-manual-en",
-          "version": "26.1.0.49208-0+f56"
+          "version": "26.3.0.49277-0+f125"
         },
         {
           "name": "ni-matlab-interface",
-          "version": "26.1.0.49318-0+f166"
+          "version": "26.3.0.49370-0+f218"
         },
         {
           "name": "ni-max",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49268-0+f116"
         },
         {
           "name": "ni-max-remote-provider",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49268-0+f116"
         },
         {
           "name": "ni-max-rempxi-provider",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-max-software-provider",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-mdfsupport",
-          "version": "26.0.0.49245-0+f93"
+          "version": "26.5.0.49246-0+f94"
         },
         {
           "name": "ni-mdfsupport",
@@ -1646,12 +1591,8 @@
           "version": "17.1.1.49154-0+f2"
         },
         {
-          "name": "ni-metasuite",
-          "version": "26.0.0.49246-0+f94"
-        },
-        {
           "name": "ni-metauninstaller",
-          "version": "26.0.0.49246-0+f94"
+          "version": "26.5.0.49246-0+f94"
         },
         {
           "name": "ni-metauninstaller",
@@ -1663,15 +1604,15 @@
         },
         {
           "name": "ni-msaspdotnetcore-runtime-80",
-          "version": "26.0.0.49174-0+f22"
+          "version": "26.5.0.49173-0+f21"
         },
         {
           "name": "ni-msaspdotnetcore-runtime-80-x86",
-          "version": "26.0.0.49174-0+f22"
+          "version": "26.5.0.49173-0+f21"
         },
         {
           "name": "ni-msdotnet-desktop-runtime-80",
-          "version": "26.0.0.49174-0+f22"
+          "version": "26.5.0.49173-0+f21"
         },
         {
           "name": "ni-msdotnet-desktop-runtime-80",
@@ -1679,11 +1620,11 @@
         },
         {
           "name": "ni-msdotnet-desktop-runtime-80-x86",
-          "version": "26.0.0.49174-0+f22"
+          "version": "26.5.0.49173-0+f21"
         },
         {
           "name": "ni-msdotnet-runtime-80",
-          "version": "26.0.0.49174-0+f22"
+          "version": "26.5.0.49173-0+f21"
         },
         {
           "name": "ni-msdotnet4x",
@@ -1716,6 +1657,10 @@
         {
           "name": "ni-msdotnet4x",
           "version": "26.3.0.49181-0+f29"
+        },
+        {
+          "name": "ni-msdotnet4x",
+          "version": "26.5.0.49175-0+f23"
         },
         {
           "name": "ni-msiproperties",
@@ -1779,7 +1724,7 @@
         },
         {
           "name": "ni-msvcrt-2015",
-          "version": "26.0.0.49242-0+f90"
+          "version": "26.5.0.49220-0+f68"
         },
         {
           "name": "ni-msvcrt-2015",
@@ -1787,7 +1732,7 @@
         },
         {
           "name": "ni-mswebview2",
-          "version": "26.0.0.49172-0+f20"
+          "version": "26.5.0.49173-0+f21"
         },
         {
           "name": "ni-mswebview2",
@@ -1799,7 +1744,7 @@
         },
         {
           "name": "ni-networkdiscoverysvc",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-networkdiscoverysvc",
@@ -1807,15 +1752,23 @@
         },
         {
           "name": "ni-nigel-local-service",
-          "version": "26.0.0.49578-0+f426"
+          "version": "26.5.0.49706-0+f554"
         },
         {
           "name": "ni-nigel-local-service",
-          "version": "26.0.1.49161-0+f9"
+          "version": "26.5.1.49161-0+f9"
+        },
+        {
+          "name": "ni-nls-plugin-entitlement",
+          "version": "26.5.0.49360-0+f208"
+        },
+        {
+          "name": "ni-nls-plugin-entitlement",
+          "version": "26.5.2.49163-0+f11"
         },
         {
           "name": "ni-offline-help-viewer",
-          "version": "26.0.0.49203-0+f51"
+          "version": "26.5.0.49204-0+f52"
         },
         {
           "name": "ni-offline-help-viewer",
@@ -1823,7 +1776,7 @@
         },
         {
           "name": "ni-opc-support",
-          "version": "26.1.0.49287-0+f135"
+          "version": "26.5.0.49333-0+f181"
         },
         {
           "name": "ni-opcenum",
@@ -1831,7 +1784,7 @@
         },
         {
           "name": "ni-openssl3-libs",
-          "version": "26.0.0.49226-0+f74"
+          "version": "26.5.0.49224-0+f72"
         },
         {
           "name": "ni-openssl3-libs",
@@ -1839,7 +1792,7 @@
         },
         {
           "name": "ni-openssl3-libs-x86",
-          "version": "26.0.0.49226-0+f74"
+          "version": "26.5.0.49224-0+f72"
         },
         {
           "name": "ni-openssl3-libs-x86",
@@ -1847,7 +1800,7 @@
         },
         {
           "name": "ni-package-builder-labview-2026-support",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-package-manager",
@@ -2483,7 +2436,7 @@
         },
         {
           "name": "ni-portable-configuration",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-portable-configuration",
@@ -2491,7 +2444,7 @@
         },
         {
           "name": "ni-python-interface",
-          "version": "26.1.0.49318-0+f166"
+          "version": "26.3.0.49370-0+f218"
         },
         {
           "name": "ni-realtime-error-dialog-x64",
@@ -2507,7 +2460,7 @@
         },
         {
           "name": "ni-remote-configuration",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-remote-configuration",
@@ -2519,15 +2472,11 @@
         },
         {
           "name": "ni-rgt-labview-support",
-          "version": "26.0.0.49204-0+f52"
-        },
-        {
-          "name": "ni-rgt-labview-support",
-          "version": "26.0.1.49156-0+f4"
+          "version": "26.3.0.49243-0+f91"
         },
         {
           "name": "ni-rpc",
-          "version": "26.0.0.49300-0+f148"
+          "version": "26.5.0.49394-0+f242"
         },
         {
           "name": "ni-rpc",
@@ -2535,11 +2484,11 @@
         },
         {
           "name": "ni-search",
-          "version": "26.1.0.49900-0+f748"
+          "version": "26.3.0.49790-0+f638"
         },
         {
           "name": "ni-search-labview-2026-support",
-          "version": "26.1.0.49900-0+f748"
+          "version": "26.3.0.49790-0+f638"
         },
         {
           "name": "ni-securityupdate-kb67l8lcqw-killbits",
@@ -2551,91 +2500,91 @@
         },
         {
           "name": "ni-skyline-alarminstance-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-core-services",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-file-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-license-webservice",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-notification-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-openssl",
-          "version": "26.0.0.49276-0+f124"
+          "version": "26.5.0.49273-0+f121"
         },
         {
           "name": "ni-skyline-redis-support",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-service-manager",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-smtp-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-tag-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-tagruleengine-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-tdmreader-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-user-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-skyline-wif-webservice",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49273-0+f121"
         },
         {
           "name": "ni-skyline-wif-webui",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49273-0+f121"
         },
         {
           "name": "ni-slcp",
-          "version": "26.0.0.49234-0+f82"
+          "version": "26.5.0.49220-0+f68"
         },
         {
           "name": "ni-slcp-common",
-          "version": "26.0.0.49234-0+f82"
+          "version": "26.5.0.49220-0+f68"
         },
         {
           "name": "ni-slcp-x86",
-          "version": "26.0.0.49234-0+f82"
+          "version": "26.5.0.49220-0+f68"
         },
         {
           "name": "ni-ssl-labview-2026-runtime-engine-support",
-          "version": "26.1.0.49305-0+f153"
+          "version": "26.3.0.49339-0+f187"
         },
         {
           "name": "ni-ssl-labview-2026-runtime-engine-x86-support",
-          "version": "26.1.0.49305-0+f153"
+          "version": "26.3.0.49339-0+f187"
         },
         {
           "name": "ni-ssl-labview-2026-support",
-          "version": "26.1.0.49305-0+f153"
+          "version": "26.3.0.49339-0+f187"
         },
         {
           "name": "ni-svcloc",
-          "version": "26.1.0.49284-0+f132"
+          "version": "26.5.0.49327-0+f175"
         },
         {
           "name": "ni-svcloc",
@@ -2643,7 +2592,7 @@
         },
         {
           "name": "ni-sysapi",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-sysapi",
@@ -2651,11 +2600,11 @@
         },
         {
           "name": "ni-sysapi-webservice",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.3.0.49279-0+f127"
         },
         {
           "name": "ni-syscfg-dotnet-runtime",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-syscfg-dotnet-runtime",
@@ -2663,15 +2612,15 @@
         },
         {
           "name": "ni-syscfg-labview-support",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-syscfg-labview-support-common",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-syscfg-runtime",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.5.0.49267-0+f115"
         },
         {
           "name": "ni-syscfg-runtime",
@@ -2679,63 +2628,63 @@
         },
         {
           "name": "ni-sysdetails-webservice",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.3.0.49279-0+f127"
         },
         {
           "name": "ni-sysmgmt-common",
-          "version": "26.0.0.49265-0+f113"
+          "version": "26.5.0.49278-0+f126"
         },
         {
           "name": "ni-sysmgmt-salt-master-support",
-          "version": "26.0.0.49265-0+f113"
+          "version": "26.5.0.49278-0+f126"
         },
         {
           "name": "ni-system-webserver",
-          "version": "26.1.0.49287-0+f135"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-system-webserver-appserver",
-          "version": "26.1.0.49287-0+f135"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-system-webserver-base",
-          "version": "26.1.0.49287-0+f135"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-systemlink-message-broker",
-          "version": "26.0.0.49259-0+f107"
+          "version": "26.5.0.49271-0+f119"
         },
         {
           "name": "ni-systemlink-nosqldatabase-4.2",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-systemlink-repository-webservice",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-systemlink-system-webservice",
-          "version": "26.0.0.49265-0+f113"
+          "version": "26.5.0.49278-0+f126"
         },
         {
           "name": "ni-systemlink-user-data-service",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49276-0+f124"
         },
         {
           "name": "ni-systemlogging-utils",
-          "version": "26.1.0.49284-0+f132"
+          "version": "26.5.0.49329-0+f177"
         },
         {
           "name": "ni-targetdiscoverywizard",
-          "version": "26.0.0.49264-0+f112"
+          "version": "26.5.0.49268-0+f116"
         },
         {
           "name": "ni-tdm-excel-addin",
-          "version": "19.0.0.49154-0+f2"
+          "version": "26.5.0.49251-0+f99"
         },
         {
           "name": "ni-tdms",
-          "version": "26.1.0.49286-0+f134"
+          "version": "26.5.0.49332-0+f180"
         },
         {
           "name": "ni-teststand-2025-nls-plugin",
@@ -2743,19 +2692,19 @@
         },
         {
           "name": "ni-traceengine",
-          "version": "26.1.0.49284-0+f132"
+          "version": "26.5.0.49327-0+f175"
         },
         {
           "name": "ni-update-service",
-          "version": "26.0.0.49272-0+f120"
+          "version": "26.5.0.49246-0+f94"
         },
         {
           "name": "ni-usi-core",
-          "version": "26.0.0.49242-0+f90"
+          "version": "26.5.0.49251-0+f99"
         },
         {
           "name": "ni-utf-labview-support",
-          "version": "25.1.0.49240-0+f88"
+          "version": "26.3.0.49249-0+f97"
         },
         {
           "name": "ni-utf-labview-support",
@@ -2763,67 +2712,71 @@
         },
         {
           "name": "ni-variable-engine",
-          "version": "26.1.0.49287-0+f135"
+          "version": "26.5.0.49333-0+f181"
         },
         {
           "name": "ni-variable-engine-labview-2026-support-en",
-          "version": "26.1.0.49905-0+f753"
+          "version": "26.3.0.49792-0+f640"
         },
         {
           "name": "ni-viawin-labview-support",
-          "version": "26.1.0.49208-0+f56"
+          "version": "26.3.0.49277-0+f125"
         },
         {
           "name": "ni-vipm",
-          "version": "26.1.0.49165-0+f13"
+          "version": "26.3.0.49161-0+f9"
         },
         {
           "name": "ni-vipm-helper",
-          "version": "26.1.0.49165-0+f13"
+          "version": "26.3.0.49161-0+f9"
         },
         {
           "name": "ni-web-based-configuration",
-          "version": "26.0.0.49260-0+f108"
+          "version": "26.3.0.49276-0+f124"
         },
         {
-          "name": "ni-web-pipeline-26.0",
-          "version": "26.0.0.49229-0+f77"
+          "name": "ni-web-pipeline-26.5",
+          "version": "26.5.0.49225-0+f73"
         },
         {
           "name": "ni-web-services-labview-2026-support",
-          "version": "26.1.0.49288-0+f136"
+          "version": "26.5.0.49335-0+f183"
         },
         {
           "name": "ni-webserver",
-          "version": "26.0.0.49243-0+f91"
+          "version": "26.5.0.49248-0+f96"
         },
         {
           "name": "ni-webserver-webservices",
-          "version": "26.0.0.49241-0+f89"
+          "version": "26.5.0.49246-0+f94"
         },
         {
           "name": "ni-webserver-webservices-amqp",
-          "version": "26.0.0.49242-0+f90"
+          "version": "26.5.0.49246-0+f94"
         },
         {
           "name": "ni-webservices-amqp-deployment-support",
-          "version": "26.1.0.49285-0+f133"
+          "version": "26.5.0.49330-0+f178"
         },
         {
           "name": "ni-webservices-amqp-deployment-support-x86",
-          "version": "26.1.0.49285-0+f133"
+          "version": "26.5.0.49330-0+f178"
         },
         {
           "name": "ni-webservices-amqp-labview-2026-support",
-          "version": "26.1.0.49285-0+f133"
+          "version": "26.5.0.49330-0+f178"
         },
         {
           "name": "ni-wif-landingpage",
-          "version": "26.0.0.49263-0+f111"
+          "version": "26.3.0.49279-0+f127"
         },
         {
           "name": "ni-xerces-3.3",
-          "version": "26.0.0.49200-0+f48"
+          "version": "26.3.0.49218-0+f66"
+        },
+        {
+          "name": "ni-zlib1-libs",
+          "version": "26.5.0.49231-0+f79"
         },
         {
           "name": "system-windows-x64",
@@ -2987,7 +2940,7 @@
         }
       ],
       "labview_version": "2026",
-      "version": "win-c02e040511e4"
+      "version": "win-6e0405c2fd17"
     },
     {
       "key": "linux",
