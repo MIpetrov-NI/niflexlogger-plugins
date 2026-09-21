@@ -1771,7 +1771,7 @@
         var selected=(platState[cap] || keys.slice()).filter(function(k){ return k!==platform; });
         if(b.checked) selected.push(platform);
         platState[cap]=selected.filter(function(k,i,a){ return keys.indexOf(k)>=0 && a.indexOf(k)===i; });
-        histRender();
+        histRefresh();
       }); });
       Array.prototype.forEach.call(document.querySelectorAll('input[name="cidash-hist-scope"]'), function(r){ r.addEventListener('change', function(){ histScopeApply(); histRefresh(); }); });
       var hf=document.getElementById('cidash-hist-from'); if(hf) hf.addEventListener('change', histRefresh);
@@ -2092,7 +2092,7 @@
   </script>
   <main class="lvci-main">
   <h1>CI Dashboard — niflexlogger-plugins</h1>
-  <div class="sub">Last updated: 2026-09-19 14:16 UTC &nbsp;|&nbsp; Auto-refreshes every 15 min</div>
+  <div class="sub">Last updated: 2026-09-21 08:12 UTC &nbsp;|&nbsp; Auto-refreshes every 15 min</div>
   <div class="nav">
     <a href="https://github.com/MIpetrov-NI/niflexlogger-plugins">GitHub</a>
     <a href="https://github.com/MIpetrov-NI/niflexlogger-plugins/actions">Actions</a>
@@ -2138,6 +2138,46 @@
       </tr>
     </thead>
     <tbody>
+    <tr data-project="false" data-deponly="false">
+      <td class="cidash-rev">
+        <div class="cidash-rev-wrap">
+          <span class="cidash-avatar" style="background:hsl(298,42%,45%)" title="MIpetrov-NI" aria-hidden="true">M</span>
+          <div class="cidash-rev-body">
+            <div class="cidash-rev-line1"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7" class="cidash-rev-msg" title="Fix dashboard tooling checkout source">Fix dashboard tooling checkout source</a></div>
+            <div class="cidash-rev-meta"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">8b0d3fa</a><span class="cidash-rev-dot">&middot;</span>MIpetrov-NI<span class="cidash-rev-dot">&middot;</span>2026-09-21</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+    </tr>
+
+    <tr data-project="false" data-deponly="false">
+      <td class="cidash-rev">
+        <div class="cidash-rev-wrap">
+          <span class="cidash-avatar" style="background:hsl(150,42%,45%)" title="github-actions[bot]" aria-hidden="true">G</span>
+          <div class="cidash-rev-body">
+            <div class="cidash-rev-line1"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=e519873ffc1e30d78b8929aa3c68795d4e6f580b" class="cidash-rev-msg" title="ci: adopt LabVIEW CI tooling v4.18.4 (config + scripts; 24 workflow file(s) defe">ci: adopt LabVIEW CI tooling v4.18.4 (config + scripts; 24 workflow file(s) defe</a></div>
+            <div class="cidash-rev-meta"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=e519873ffc1e30d78b8929aa3c68795d4e6f580b" class="cidash-rev-sha" title="Browse this revision's VIs in the VI Browser">e519873</a><span class="cidash-rev-dot">&middot;</span>github-actions[bot]<span class="cidash-rev-dot">&middot;</span>2026-09-19</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+      <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
+    </tr>
+
     <tr data-project="false" data-deponly="false">
       <td class="cidash-rev">
         <div class="cidash-rev-wrap">

@@ -1,8 +1,26 @@
 {
   "schema": 1,
   "repo": "MIpetrov-NI/niflexlogger-plugins",
-  "sha": "6b18f1a66ffa74307e1d4643e152eb4960032bf7",
+  "sha": "8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7",
   "revisions": [
+    {
+      "sha": "8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7",
+      "short": "8b0d3fa",
+      "message": "Fix dashboard tooling checkout source",
+      "author": "MIpetrov-NI",
+      "date": "2026-09-21T08:11:47Z",
+      "project": false,
+      "dep_only": false
+    },
+    {
+      "sha": "e519873ffc1e30d78b8929aa3c68795d4e6f580b",
+      "short": "e519873",
+      "message": "ci: adopt LabVIEW CI tooling v4.18.4 (config + scripts; 24 workflow file(s) deferred)",
+      "author": "github-actions[bot]",
+      "date": "2026-09-19T15:14:35Z",
+      "project": false,
+      "dep_only": false
+    },
     {
       "sha": "6b18f1a66ffa74307e1d4643e152eb4960032bf7",
       "short": "6b18f1a",
