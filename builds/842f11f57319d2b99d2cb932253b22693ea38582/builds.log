@@ -1,0 +1,2691 @@
+=== ExecuteBuildSpec 'Analog Tachometer Process Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Analog Tachometer Process\source\Analog Tachometer Process\Analog Tachometer Process.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_53726.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+LabVIEW launched successfully.
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\Analog Tachometer Process\source\Analog Tachometer 
+Process\Analog Tachometer Process.lvclass\Analog Tachometer Process.ctl
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Analog Tachometer Process.lvlib:Analog Tachometer Process.lvclass:Analog 
+Tachometer Process.ctl:
+- Analog Tachometer Process.lvlib:Analog Tachometer Process.lvclass:Process.vi:
+	SubVI 'PluginSDK.lvlibp:Plugin.lvclass:Read 1D Wfm (DBL)_v2.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Data.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Data.vi': Polymorphic subVI is 
+broken
+
+	SubVI 'Analog Tachometer Process.lvlib:Analog Tachometer 
+Process.lvclass:Update Timing.vi': SubVI is not executable
+
+	Poly VI 'SVPO Analog Tacho Process.vi': SubVI is missing
+
+	Poly VI 'SVPO Analog Tacho Process.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'CSV Export Packed Library' [Packed Library] target 'My Computer' in PDK plugins\CSV Export\source\CSV Export\CSV Export.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_298639.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\CSV Export\CSV Export.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\CSV Export\CSV Export.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'DateTimeChannel Packed Library' [Packed Library] target 'My Computer' in PDK plugins\DateTimeChannel\source\DateTimeChannel\DateTimeChannel.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_602104.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\DateTimeChannel\DateTimeChannel.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\DateTimeChannel\DateTimeChannel.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'DFT_Spectra Packed Library' [Packed Library] target 'My Computer' in PDK plugins\DFT_Spectra\source\DFT_Spectra.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_153067.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\DFT_Spectra\source\DFT_Spectra.lvclass\DFT_Spectra.ctl
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:Cleanup Session.vi:
+	SubVI 'Release Buffer.vi': SubVI is missing
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:Configure Session.vi:
+	SubVI 'PluginSDK.lvlibp:Plugin.lvclass:Notify Parameters Changed.vi': SubVI 
+is not executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Parameter.vi': Polymorphic 
+subVI is broken
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	SubVI 'PluginSDK.lvlibp:Plugin.lvclass:Set Plugin Timing.vi': SubVI is not 
+executable
+
+	SubVI 'PluginSDK.lvlibp:Plugin.lvclass:Set Plugin Resampling.vi': SubVI is 
+not executable
+
+	SubVI 'Obtain Buffer.vi': SubVI is missing
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	VI Refnum 'type specifier VI Refnum (for type only)': Refers to a missing 
+LabVIEW class
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Global Variable 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra 
+Global.vi': SubVI is not executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Type Definition 'Data': Type definition not found or contains errors
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Compute Average Spectra.vi:
+	Type Definition 'spectrum info': Type definition not found or contains errors
+
+	Type Definition 'x-axis units': Type definition not found or contains errors
+
+	Type Definition 'spectrum type': Type definition not found or contains errors
+
+	Type Definition 'engineering units': Type definition not found or contains 
+errors
+
+	Type Definition 'weighting filter': Type definition not found or contains 
+errors
+
+	Type Definition 'complimentary spectrum units': Type definition not found or 
+contains errors
+
+	Type Definition 'x-axis units': Type definition not found or contains errors
+
+	Type Definition 'spectrum type': Type definition not found or contains errors
+
+	Type Definition 'engineering units': Type definition not found or contains 
+errors
+
+	Type Definition 'weighting filter': Type definition not found or contains 
+errors
+
+	Type Definition 'complimentary spectrum units': Type definition not found or 
+contains errors
+
+	Poly VI 'SVFA Power Spectrum.vi': SubVI is missing
+
+	Poly VI 'SVFA Power Spectrum.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Conditionally Compute Average 
+Spectra.vi:
+	Type Definition 'spectrum info': Type definition not found or contains errors
+
+	Type Definition 'x-axis units': Type definition not found or contains errors
+
+	Type Definition 'spectrum type': Type definition not found or contains errors
+
+	Type Definition 'engineering units': Type definition not found or contains 
+errors
+
+	Type Definition 'weighting filter': Type definition not found or contains 
+errors
+
+	Type Definition 'complimentary spectrum units': Type definition not found or 
+contains errors
+
+	Type Definition 'x-axis units': Type definition not found or contains errors
+
+	Type Definition 'spectrum type': Type definition not found or contains errors
+
+	Type Definition 'engineering units': Type definition not found or contains 
+errors
+
+	Type Definition 'weighting filter': Type definition not found or contains 
+errors
+
+	Type Definition 'complimentary spectrum units': Type definition not found or 
+contains errors
+
+	Type Definition 'Data': Type definition not found or contains errors
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	Cannot save compiled code to previous versions
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Determine If Show UI.vi:
+	Type Definition 'Data': Type definition not found or contains errors
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	Type Definition 'Data out': Type definition not found or contains errors
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra Data.ctl:
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra UI.vi:
+	XControl 'Spectrum with Cursors': The XControl used in this VI is broken.
+
+	XControl 'Spectrum with Cursors': Default value includes broken or missing 
+LabVIEW class
+
+	LabVIEW Object 'Spectrum Data': Refers to a missing LabVIEW class
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Spectra.ctl:
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Update Spectra.vi:
+	Type Definition 'Data': Type definition not found or contains errors
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	Type Definition 'Data out': Type definition not found or contains errors
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Data.lvclass': Refers to a missing LabVIEW class
+
+	VI Refnum 'Spectra UI': Refers to a missing LabVIEW class
+
+	Type Definition 'spectrum info': Type definition not found or contains errors
+
+	Type Definition 'x-axis units': Type definition not found or contains errors
+
+	Type Definition 'spectrum type': Type definition not found or contains errors
+
+	Type Definition 'engineering units': Type definition not found or contains 
+errors
+
+	Type Definition 'weighting filter': Type definition not found or contains 
+errors
+
+	Type Definition 'complimentary spectrum units': Type definition not found or 
+contains errors
+
+	Type Definition 'x-axis units': Type definition not found or contains errors
+
+	Type Definition 'spectrum type': Type definition not found or contains errors
+
+	Type Definition 'engineering units': Type definition not found or contains 
+errors
+
+	Type Definition 'weighting filter': Type definition not found or contains 
+errors
+
+	Type Definition 'complimentary spectrum units': Type definition not found or 
+contains errors
+
+	Poly VI 'SV Convert to Data Object.vi': SubVI is missing
+
+	Poly VI 'SV Convert to Data Object.vi': SubVI is missing
+
+	Call By Reference: Contains unwired or bad terminal
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	SubVI 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Determine If Show UI.vi': 
+SubVI is not executable
+
+- DFT_Spectra.lvlib:DFT_Spectra.lvclass:Process.vi:
+	SubVI 'PluginSDK.lvlibp:Plugin.lvclass:Read 1D Wfm (DBL)_v2.vi': SubVI is not 
+executable
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	SubVI 'Write to Buffer.vi': SubVI is missing
+
+	SubVI 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Update Spectra.vi': SubVI is 
+not executable
+
+	SubVI 'DFT_Spectra.lvlib:DFT_Spectra.lvclass:DFT_Conditionally Compute 
+Average Spectra.vi': SubVI is not executable
+
+	Poly VI 'Read from Buffer.vi': SubVI is missing
+
+	Poly VI 'Read from Buffer.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Digital Output Handler Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Digital Output Handler\source\Digital Output Handler\Digital Output Handler.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_717925.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Digital Output Handler\Digital Output Handler.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Digital Output Handler\Digital Output Handler.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'Dynamic Channel Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Dynamic Channel\source\Dynamic Channel\Dynamic Channel.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_100170.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Dynamic Channel\Dynamic Channel.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Dynamic Channel\Dynamic Channel.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'FFT Packed Library' [Packed Library] target 'My Computer' in PDK plugins\FFT\source\FFT.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_998019.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\FFT\FFT.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\FFT\FFT.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'Historical Table Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Historical Table\source\Historical Table\Historical Table.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_517417.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Historical Table\Historical Table.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Historical Table\Historical Table.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'Output Sequencer Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Output Sequencer\source\Output Sequencer - FlexLogger 2024-2025.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_423370.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\Output Sequencer\source\Output Sequencer\Output 
+Sequencer.lvclass\Output Sequencer.ctl
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Calculate Channel Value.vi:
+	Type Definition 'Step Settings': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel 
+Values.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Process Value 
+Delays.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Interpolate 
+Values.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Last Values.vi': 
+SubVI is not executable
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Check Step Condition.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup Compiled Settings.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	Type Definition 'Compiled Settings': Type definition not found or contains 
+errors
+
+	Type Definition 'Start condition': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Stop Condition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Start condition': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Stop Condition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Compiled Settings': Constant value includes broken or 
+missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup Expression.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	LabVIEW Class Method SubVI 'Destruct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Destruct.vi': SubVI is missing
+
+	Wire: Class conflict
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compile Settings.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Compile Steps.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compile Steps.vi:
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Constant value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Compiled 
+Step.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Compiled 
+Step.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compiled Settings.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compiled Step.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Convert Settings to 
+String.vi:
+	SubVI 'To JSON Text.vim': SubVI is missing
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Convert Settings to 
+String.vi:Instance:efaceabb-c9f2-4e33-a34b-72f25354c9b8.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'Variant to JSON Text.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Expression Data.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel Values.vi:
+	Type Definition 'Channel Value Expression': Type definition not found or 
+contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Compiled Step.vi:
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Default value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Validate Step 
+Action.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Validate Step 
+Action.vi': SubVI is not executable
+
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Constant value includes broken or missing 
+LabVIEW class
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channels From 
+Expression String.vi': SubVI is not executable
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Throw Unknown Channel 
+Error.vi': SubVI is not executable
+
+	Wire: Class conflict
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expression.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	Wire: Class conflict
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expression.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Load Settings from JSON.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Default 
+Settings.vi': SubVI is not executable
+
+	SubVI 'From JSON Text.vim': SubVI is missing
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Load Settings from 
+JSON.vi:Instance:494bb6af-513b-4fa7-a84a-c35cc4f9ba6f.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'JSON text to Variant.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Output Sequencer.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Sequence State Machine.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize 
+Sequence.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Start Sequence.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Stop Sequence.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Current Step 
+Duration.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Max Cycles.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Find Valid Step.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Update Sequencer 
+State.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Update Previous Step 
+Values.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel 
+Values.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel 
+Values.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Export Settings.vi:
+	SubVI 'To JSON Text.vim': SubVI is missing
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Export 
+Settings.vi:Instance:7bfdc0bf-7b93-47bb-8743-fa978eaef56a.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'Variant to JSON Text.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Get Valid Channel Value String.vi:
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Destruct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Destruct.vi': SubVI is missing
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Test Settings UI.vi:
+	Static VI Reference 'Output Sequencer.lvlib:Settings UI.lvclass:Settings 
+UI.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Default 
+Settings.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Load Settings from 
+JSON.vi': SubVI is not executable
+
+	SubVI 'To JSON Text.vim': SubVI is missing
+
+	Polymorphic terminal cannot accept this data type.
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Test Settings 
+UI.vi:Instance:70c0feee-f92b-491b-951b-ba91555f4af3.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'Variant to JSON Text.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Validate Condition.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Destruct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Destruct.vi': SubVI is missing
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	SubVI 'Output Sequencer.lvlib:Settings UI.lvclass:Replace Formula 
+Variables.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channels From 
+Expression String.vi': SubVI is not executable
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Output Sequencer Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Output Sequencer\source\Output Sequencer.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_630890.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\Output Sequencer\source\Output Sequencer\Output 
+Sequencer.lvclass\Output Sequencer.ctl
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Calculate Channel Value.vi:
+	Type Definition 'Step Settings': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel 
+Values.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Process Value 
+Delays.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Interpolate 
+Values.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Last Values.vi': 
+SubVI is not executable
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Check Step Condition.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup Compiled Settings.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	Type Definition 'Compiled Settings': Type definition not found or contains 
+errors
+
+	Type Definition 'Start condition': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Stop Condition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Start condition': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Stop Condition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Compiled Settings': Constant value includes broken or 
+missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup 
+Expression.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Cleanup Expression.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	LabVIEW Class Method SubVI 'Destruct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Destruct.vi': SubVI is missing
+
+	Wire: Class conflict
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compile Settings.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Compile Steps.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compile Steps.vi:
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Constant value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Compiled 
+Step.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Compiled 
+Step.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compiled Settings.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Compiled Step.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Convert Settings to 
+String.vi:
+	SubVI 'To JSON Text.vim': SubVI is missing
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Convert Settings to 
+String.vi:Instance:efaceabb-c9f2-4e33-a34b-72f25354c9b8.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'Variant to JSON Text.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Expression Data.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel Values.vi:
+	Type Definition 'Channel Value Expression': Type definition not found or 
+contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Unbundle By Name: Cluster is invalid or empty
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+	Poly VI 'Eval.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Compiled Step.vi:
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Default value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Default value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Validate Step 
+Action.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Validate Step 
+Action.vi': SubVI is not executable
+
+	Type Definition 'Compiled Step': Type definition not found or contains errors
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Precondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Analog value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Digital value': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Digital value': Constant value includes broken or missing 
+LabVIEW class
+
+	Type Definition 'Postcondition': Type definition not found or contains errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Compiled Step': Constant value includes broken or missing 
+LabVIEW class
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Conditional 
+Expression.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channels From 
+Expression String.vi': SubVI is not executable
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Throw Unknown Channel 
+Error.vi': SubVI is not executable
+
+	Wire: Class conflict
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expression.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	Bundle By Name: Cluster is invalid or empty
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Constant value includes broken or missing 
+LabVIEW class
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	Wire: Class conflict
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expressions.vi:
+	Type Definition 'Expression Data': Type definition not found or contains 
+errors
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	LabVIEW Object 'Expression': Refers to a missing LabVIEW class
+
+	Type Definition 'Expression Data': Default value includes broken or missing 
+LabVIEW class
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize Value 
+Expression.vi': SubVI is not executable
+
+	Cannot save compiled code to previous versions
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Load Settings from JSON.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Default 
+Settings.vi': SubVI is not executable
+
+	SubVI 'From JSON Text.vim': SubVI is missing
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Load Settings from 
+JSON.vi:Instance:494bb6af-513b-4fa7-a84a-c35cc4f9ba6f.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'JSON text to Variant.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Output Sequencer.ctl:
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Sequence State Machine.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Initialize 
+Sequence.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Start Sequence.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Condition.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Stop Sequence.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Current Step 
+Duration.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Max Cycles.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Find Valid Step.vi': 
+SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Update Sequencer 
+State.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Output Sequencer.lvclass:Update Previous Step 
+Values.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel 
+Values.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channel 
+Values.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Export Settings.vi:
+	SubVI 'To JSON Text.vim': SubVI is missing
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+	Polymorphic terminal cannot accept this data type.
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Export 
+Settings.vi:Instance:7bfdc0bf-7b93-47bb-8743-fa978eaef56a.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'Variant to JSON Text.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Get Valid Channel Value String.vi:
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Destruct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Destruct.vi': SubVI is missing
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+	Global Variable 'Output Sequencer.lvlib:Output Sequencer.lvclass:Global 
+Strings.vi': SubVI is not executable
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Test Settings UI.vi:
+	Static VI Reference 'Output Sequencer.lvlib:Settings UI.lvclass:Settings 
+UI.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Default 
+Settings.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Load Settings from 
+JSON.vi': SubVI is not executable
+
+	SubVI 'To JSON Text.vim': SubVI is missing
+
+	Polymorphic terminal cannot accept this data type.
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Test Settings 
+UI.vi:Instance:70c0feee-f92b-491b-951b-ba91555f4af3.vi:
+	LabVIEW Object 'LVClass Serializer': Refers to a missing LabVIEW class
+
+	SubVI 'Variant to JSON Text.vi': SubVI is missing
+
+- Output Sequencer.lvlib:Settings UI.lvclass:Validate Condition.vi:
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Check Expression 
+Errors.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Constants.vi': 
+SubVI is not executable
+
+	LabVIEW Class Method SubVI 'Destruct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Destruct.vi': SubVI is missing
+
+	LabVIEW Object 'muExpr in': Refers to a missing LabVIEW class
+
+	LabVIEW Class Method SubVI 'Construct.vi': The wired class does not support a 
+method of this VI's name.
+
+	LabVIEW Class Method SubVI 'Construct.vi': SubVI is missing
+
+	SubVI 'Output Sequencer.lvlib:Settings UI.lvclass:Replace Formula 
+Variables.vi': SubVI is not executable
+
+	SubVI 'Output Sequencer.lvlib:Output Sequencer.lvclass:Get Channels From 
+Expression String.vi': SubVI is not executable
+
+	Wire: Class conflict
+
+	Wire: Class conflict
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Power Spectrum Density Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Power Spectrum Density\source\Power Spectrum Density.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_990383.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Power Spectrum Density\Power Spectrum Density.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Power Spectrum Density\Power Spectrum Density.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'Sequencer with Output Values Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Sequencer with Output Values - Deprecated\source\Sequencer with Output Values\Sequencer with Output Values.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_187526.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\Sequencer with Output Values - 
+Deprecated\source\Sequencer with Output Values\Configure Session.vi
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Sequencer with Output Values.lvlib:Sequencer with Output Values.lvclass:Get 
+Channel Name Append String.vi:
+	This VI claims to be part of a library, but that library does not claim to 
+own this VI.
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Spectrogram Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Spectrogram\source\Spectrogram.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_813741.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\Spectrogram\source\Spectrogram.vi
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Spectrogram.lvlib:Spectrogram.lvclass:Spectrogram.vi:
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA Configure Spectrogram Indicator.vi': SubVI is missing
+
+	Poly VI 'TFA STFT Spectrogram.vi': SubVI is missing
+
+	Poly VI 'TFA STFT Spectrogram.vi': SubVI is missing
+
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'StreamReader Packed Library' [Packed Library] target 'My Computer' in PDK plugins\StreamReader\source\StreamReader\StreamReader.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_195909.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\StreamReader\StreamReader.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\StreamReader\StreamReader.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'StreamWriter Packed Library' [Packed Library] target 'My Computer' in PDK plugins\StreamWriter\source\StreamWriter\StreamWriter.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_903349.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\StreamWriter\StreamWriter.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\StreamWriter\StreamWriter.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
+=== ExecuteBuildSpec 'Tone Measurements Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Tone Measurements\source\Tone Measurements.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_74053.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+LabVIEWCLI.exe : Operation output: 
+At C:\workspace\.github\labview\build-binaries.ps1:252 char:12
++     $out = & $CliExe @cliArgs 2>&1 | Out-String
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Operation output: :String) [], Re 
+   moteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Error Code : 1
+Error Message : Cannot complete build because following VI loaded broken:
+
+C:\workspace\PDK plugins\Tone Measurements\source\Tone 
+Measurements.lvclass\Tone Measurements.ctl
+
+Open the VI in LabVIEW and fix the listed errors. If the VI loads as expected 
+but errors are still detected during the build, contact National Instruments 
+technical support for assistance.
+
+Broken VIs:
+- Tone Measurements.lvlib:Tone Measurements.lvclass:Check for Tone.vi:
+	Type Definition 'window': Type definition not found or contains errors
+
+	Poly VI 'SVFA Power Spectrum Subset.vi': SubVI is missing
+
+	Poly VI 'SVFA Power Spectrum Subset.vi': SubVI is missing
+
+	Poly VI 'SVFA Spectrum Peak Search.vi': SubVI is missing
+
+	Poly VI 'SVFA Spectrum Peak Search.vi': SubVI is missing
+
+	Poly VI 'SVFA Power in Band.vi': SubVI is missing
+
+	Poly VI 'SVFA Power in Band.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+- Tone Measurements.lvlib:Tone Measurements.lvclass:Cleanup Session.vi:
+	Unbundle By Name: Contains unwired or bad terminal
+
+	SubVI 'Release Buffer.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+- Tone Measurements.lvlib:Tone Measurements.lvclass:Configure Session.vi:
+	SubVI 'Obtain Buffer.vi': SubVI is missing
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Read Parameter.vi': Polymorphic 
+subVI is broken
+
+	Bundle By Name: Contains unwired or bad terminal
+
+	Cannot save compiled code to previous versions
+
+- Tone Measurements.lvlib:Tone Measurements.lvclass:Process.vi:
+	SubVI 'PluginSDK.lvlibp:Plugin.lvclass:Read 1D Wfm (DBL)_v2.vi': SubVI is not 
+executable
+
+	Property Node: Contains unwired or bad terminal
+
+	Property Node: Invalid property
+
+	PropItem: Invalid property
+
+	SubVI 'Tone Measurements.lvlib:Tone Measurements.lvclass:Tone Frequency to 
+Measurement Duration.vi': SubVI is not executable
+
+	SubVI 'Tone Measurements.lvlib:Tone Measurements.lvclass:Check for Tone.vi': 
+SubVI is not executable
+
+	Type Definition 'window': Type definition not found or contains errors
+
+	SubVI 'Tone Measurements.lvlib:Tone Measurements.lvclass:Single Tone 
+Measurements.vi': SubVI is not executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Data.vi': SubVI is not 
+executable
+
+	Poly VI 'PluginSDK.lvlibp:Plugin.lvclass:Write Data.vi': Polymorphic subVI is 
+broken
+
+	Unbundle By Name: Contains unwired or bad terminal
+
+	Poly VI 'Read from Buffer.vi': SubVI is missing
+
+	Poly VI 'Read from Buffer.vi': SubVI is missing
+
+	SubVI 'Write to Buffer.vi': SubVI is missing
+
+	You have connected two terminals of different types.
+
+	Cannot save compiled code to previous versions
+
+- Tone Measurements.lvlib:Tone Measurements.lvclass:Single Tone 
+Measurements.vi:
+	Type Definition 'window': Type definition not found or contains errors
+
+	Poly VI 'SVFA FFT Spectrum (Complex).vi': SubVI is missing
+
+	Poly VI 'SVFA FFT Spectrum (Complex).vi': SubVI is missing
+
+	Poly VI 'SVT THD and Harmonic Components.vi': SubVI is missing
+
+	Poly VI 'SVT THD and Harmonic Components.vi': SubVI is missing
+
+	Poly VI 'SVT SNR without Harmonics.vi': SubVI is missing
+
+	Poly VI 'SVT SNR without Harmonics.vi': SubVI is missing
+
+	Poly VI 'SVT Spurious Free Dynamic Range.vi': SubVI is missing
+
+	Poly VI 'SVT Spurious Free Dynamic Range.vi': SubVI is missing
+
+	Poly VI 'SVFA Power in Band.vi': SubVI is missing
+
+	Poly VI 'SVFA Power in Band.vi': SubVI is missing
+
+	Poly VI 'SVFA Unit Conversion.vi': SubVI is missing
+
+	Poly VI 'SVFA Unit Conversion.vi': SubVI is missing
+
+	Poly VI 'SVL AC & DC Level.vi': SubVI is missing
+
+	Poly VI 'SVL AC & DC Level.vi': SubVI is missing
+
+	Cannot save compiled code to previous versions
+
+- Tone Measurements.lvlib:Tone Measurements.lvclass:Tone Measurements.ctl:
+
+
+
+
+
+
+
+
+
+
+Click the link below to visit the Application Builder support page. Use the 
+following information as a reference:
+
+
+
+Error 1003 occurred at AB_Get_Detailed_BrokenVI_Message.vi -> 
+AB_Targetfile.lvclass:Open_Top_Level_VIs.vi
+
+
+Possible reason(s):
+
+
+LabVIEW: (Hex 0x3EB) The VI is not executable. This error may occur because 
+the VI is either broken or contains a subVI that LabVIEW cannot locate. Select 
+File>>Open to open the VI and verify that you can run it.
+An error occurred while running the ExecuteBuildSpec operation.
+
+ExecuteBuildSpec operation failed.
+
+
+=== ExecuteBuildSpec 'Waterfall Packed Library' [Packed Library] target 'My Computer' in PDK plugins\Waterfall\source\Waterfall.lvproj ===
+LabVIEWCLI started logging in file:  C:\Users\ContainerAdministrator\AppData\Local\Temp\lvtemporary_674098.log
+Using LabVIEW: "C:\Program Files\National Instruments\LabVIEW 2026\LabVIEW.exe"
+Connection established with LabVIEW at port number 3363.
+
+Operation output: 
+Generated files are:
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Waterfall\Waterfall.lvlibp
+
+C:\Users\Public\Documents\National Instruments\FlexLogger\Plugins\IOPlugins\Waterfall\Waterfall.xml
+
+
+ExecuteBuildSpec operation succeeded.
+
+
