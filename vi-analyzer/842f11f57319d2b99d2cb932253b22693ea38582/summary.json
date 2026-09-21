@@ -11,24 +11,24 @@
       "author": "Doug Bendele",
       "date": "2026-07-02T15:01:56-05:00"
     },
-    "generated_utc": "2026-09-21 09:32 UTC",
-    "analysis_date": "Monday, September 21, 2026 9:32:27 AM",
-    "duration": "00:15:24.68"
+    "generated_utc": "2026-09-21 23:31 UTC",
+    "analysis_date": "Monday, September 21, 2026 11:31:12 PM",
+    "duration": "00:17:37.83"
   },
   "summary": {
     "vis_analyzed": 422,
-    "tests_run": 43798,
-    "passed": 41044,
-    "failed": 2754,
+    "tests_run": 43861,
+    "passed": 41055,
+    "failed": 2806,
     "skipped": 0,
-    "findings": 3298,
+    "findings": 3436,
     "vis_with_findings": 404
   },
   "errors": {
     "vi_not_loadable": 0,
     "test_not_loadable": 0,
     "test_not_runnable": 0,
-    "test_error_out": 90
+    "test_error_out": 27
   },
   "rule_counts": [
     {
@@ -52,20 +52,20 @@
     {
       "test": "Wires Under Objects",
       "severity": "style",
-      "count": 264,
+      "count": 275,
       "vi_count": 118
     },
     {
       "test": "Broken VI",
       "severity": "correctness",
-      "count": 261,
-      "vi_count": 261
+      "count": 251,
+      "vi_count": 251
     },
     {
       "test": "Error Cluster Wired",
       "severity": "correctness",
-      "count": 221,
-      "vi_count": 116
+      "count": 228,
+      "vi_count": 120
     },
     {
       "test": "Comment Usage",
@@ -76,8 +76,14 @@
     {
       "test": "Wire Bends",
       "severity": "style",
-      "count": 142,
-      "vi_count": 82
+      "count": 151,
+      "vi_count": 87
+    },
+    {
+      "test": "Reentrant VI Issues",
+      "severity": "correctness",
+      "count": 146,
+      "vi_count": 59
     },
     {
       "test": "Separate Compiled Code Setting",
@@ -110,16 +116,22 @@
       "vi_count": 93
     },
     {
+      "test": "In Place Element Structure Usage",
+      "severity": "performance",
+      "count": 73,
+      "vi_count": 45
+    },
+    {
       "test": "Tunnel Position",
       "severity": "style",
       "count": 70,
       "vi_count": 30
     },
     {
-      "test": "Reentrant VI Issues",
-      "severity": "correctness",
-      "count": 55,
-      "vi_count": 29
+      "test": "Backwards Wires",
+      "severity": "style",
+      "count": 52,
+      "vi_count": 37
     },
     {
       "test": "Overlapping Controls",
@@ -128,28 +140,16 @@
       "vi_count": 21
     },
     {
-      "test": "Backwards Wires",
-      "severity": "style",
-      "count": 51,
-      "vi_count": 36
-    },
-    {
       "test": "Case Structure Default Frame",
       "severity": "style",
       "count": 48,
       "vi_count": 33
     },
     {
-      "test": "In Place Element Structure Usage",
-      "severity": "performance",
-      "count": 48,
-      "vi_count": 26
-    },
-    {
       "test": "Parallelizable Loops",
       "severity": "performance",
-      "count": 38,
-      "vi_count": 27
+      "count": 39,
+      "vi_count": 28
     },
     {
       "test": "Arrays and Strings in Loops",
@@ -230,6 +230,18 @@
       "vi_count": 6
     },
     {
+      "test": "Modularity Index",
+      "severity": "style",
+      "count": 6,
+      "vi_count": 6
+    },
+    {
+      "test": "Prepend Scalar With Build Array",
+      "severity": "style",
+      "count": 6,
+      "vi_count": 5
+    },
+    {
       "test": "Unused Code",
       "severity": "performance",
       "count": 6,
@@ -242,12 +254,6 @@
       "vi_count": 1
     },
     {
-      "test": "Prepend Scalar With Build Array",
-      "severity": "style",
-      "count": 5,
-      "vi_count": 5
-    },
-    {
       "test": "Dialog Controls",
       "severity": "style",
       "count": 4,
@@ -256,12 +262,6 @@
     {
       "test": "Indexer Datatype",
       "severity": "correctness",
-      "count": 4,
-      "vi_count": 4
-    },
-    {
-      "test": "Modularity Index",
-      "severity": "style",
       "count": 4,
       "vi_count": 4
     },
