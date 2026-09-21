@@ -141,7 +141,7 @@ jobs:
               if cfg.exists():
                   in_c = False; in_list = None; cur = None
                   for line in cfg.read_text(encoding='utf-8').splitlines():
-                      if re.match(r'^container:\s*$', line):
+                      if re.match(r'^\s{2}container:\s*$', line):
                           in_c = True; in_list = None; cur = None; continue
                       if not in_c:
                           continue
