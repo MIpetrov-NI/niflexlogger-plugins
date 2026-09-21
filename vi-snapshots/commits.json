@@ -1,0 +1,122 @@
+[
+  {
+    "sha": "8b0d3fa40ecafbc7d910244bee7fb5f9a74b9cc7",
+    "short": "8b0d3fa",
+    "message": "Fix dashboard tooling checkout source",
+    "author": "MIpetrov-NI",
+    "date": "2026-09-21T03:11:47-05:00",
+    "vi_count": 404
+  },
+  {
+    "sha": "5157341c1461717c7f7d072c8971d26479f39d47",
+    "short": "5157341",
+    "message": "Add LabVIEW CI pipeline",
+    "author": "MIpetrov-NI",
+    "date": "2026-07-29T15:48:33-05:00",
+    "vi_count": 404
+  },
+  {
+    "sha": "842f11f57319d2b99d2cb932253b22693ea38582",
+    "short": "842f11f",
+    "message": "Add Tone Measurements Plugin (#28)",
+    "author": "Doug Bendele",
+    "date": "2026-07-02T15:01:56-05:00",
+    "vi_count": 404
+  },
+  {
+    "sha": "ab13f856cd03fac9e3685633b6fbbee26314c61e",
+    "short": "ab13f85",
+    "message": "[Tachometer Processing] Fix #26 by adding state to class data (#27)",
+    "author": "Doug Bendele",
+    "date": "2026-05-21T16:20:41-05:00",
+    "vi_count": 396
+  },
+  {
+    "sha": "80342ffab5f8705709e53a50a5c68c2bfe394664",
+    "short": "80342ff",
+    "message": "Add new plugin for DFT-spectra viewing based on SVT API (#24)",
+    "author": "Doug Bendele",
+    "date": "2026-05-08T19:13:05-05:00",
+    "vi_count": 396
+  },
+  {
+    "sha": "3206ff3b614a958e3ee067e0d1a1e8ec099dd118",
+    "short": "3206ff3",
+    "message": "Add new Output Sequencer plug-in. (#22)",
+    "author": "DevinKoopmans",
+    "date": "2026-01-14T12:34:59-06:00",
+    "vi_count": 383
+  },
+  {
+    "sha": "e878a3f5844fd49a84e0715de8f04312dd4d970c",
+    "short": "e878a3f",
+    "message": "Add Analog Tachometer Process plug-in. (#17)",
+    "author": "jlangston-NI",
+    "date": "2026-01-14T11:03:06-06:00",
+    "vi_count": 185
+  },
+  {
+    "sha": "818ca78863d3a467554178a4a14dfdcf1726b5ba",
+    "short": "818ca78",
+    "message": "Add new Power Spectrum Density plug-in. (#20)",
+    "author": "Christophe Caltagirone",
+    "date": "2025-12-15T23:08:41-06:00",
+    "vi_count": 176
+  },
+  {
+    "sha": "b5b3a7160fea1bb03a6ca169b6b7cd35ead82465",
+    "short": "b5b3a71",
+    "message": "Move the PDK plug-ins to a new PDK plugins folder.",
+    "author": "Christophe Caltagirone",
+    "date": "2025-07-17T11:45:15-05:00",
+    "vi_count": 163
+  },
+  {
+    "sha": "8598080bd929be4246ad768b815e0e65c42cddcc",
+    "short": "8598080",
+    "message": "Add Sequencer Plugin",
+    "author": "Brad Buchanan",
+    "date": "2024-12-14T14:50:37-06:00",
+    "vi_count": 163
+  },
+  {
+    "sha": "f98e97553b79a58b9de4bb1b4e6be96b8acbb7bd",
+    "short": "f98e975",
+    "message": "Fixed multiple instances issue and updated README",
+    "author": "Brad Buchanan",
+    "date": "2024-12-14T11:08:19-06:00",
+    "vi_count": 163
+  },
+  {
+    "sha": "8bd8320106f9c6c4fbff44b31a36d75ad0e4a57a",
+    "short": "8bd8320",
+    "message": "Use Tree for UI instead",
+    "author": "Brad Buchanan",
+    "date": "2024-12-12T00:02:31-06:00",
+    "vi_count": 159
+  },
+  {
+    "sha": "585a82f0016d6660401e0a6220576ea4c1de8acf",
+    "short": "585a82f",
+    "message": "Initial commit",
+    "author": "Brad Buchanan",
+    "date": "2024-12-10T13:52:16-06:00",
+    "vi_count": 171
+  },
+  {
+    "sha": "a52a07945ce1dee5fdcfae821fc61e8248d23d73",
+    "short": "a52a079",
+    "message": "Add Historical Table Plugin",
+    "author": "Brad Buchanan",
+    "date": "2024-11-21T21:08:16-06:00",
+    "vi_count": 114
+  },
+  {
+    "sha": "3030ece0da8d995db5811a38af3d904e3c0f3127",
+    "short": "3030ece",
+    "message": "Initial commit",
+    "author": "Christophe Caltagirone",
+    "date": "2024-08-22T07:42:36-05:00",
+    "vi_count": 104
+  }
+]
