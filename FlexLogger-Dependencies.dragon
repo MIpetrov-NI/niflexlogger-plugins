@@ -1,0 +1,5 @@
+[nipm.feeds]
+"ni-flexlogger-pdk-2026-q3" = "https://download.ni.com/support/nipkg/products/ni-f/ni-flexlogger-plugin-development-kit/26.5/released"
+
+[nipm.dependencies]
+ni-flexlogger-plugin-development-kit = { version = "26.5.0.49720-0+f568", feed = "ni-flexlogger-pdk-2026-q3" }

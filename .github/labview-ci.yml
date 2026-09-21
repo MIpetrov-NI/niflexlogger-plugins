@@ -16,6 +16,11 @@ config:
   labviewVersion: "2026"
   branch: main
   os: [windows, linux]
+  container:
+    dragon:
+      - path: FlexLogger-Dependencies.dragon
+        monitor: true
+        monitorOn: windows
 activities:
   - dashboard
   - masscompile
