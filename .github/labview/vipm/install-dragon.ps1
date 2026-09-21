@@ -21,6 +21,6 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 $pluginSdk = 'C:\Program Files\National Instruments\LabVIEW 2026\vi.lib\FlexLogger\SDK\PluginSDK.lvlibp'
-if (-not (Test-Path -LiteralPath $pluginSdk -PathType Container)) {
+if (-not (Test-Path -LiteralPath $pluginSdk -PathType Leaf)) {
     throw "FlexLogger Plugin Development Kit was not installed: '$pluginSdk' is missing."
 }
