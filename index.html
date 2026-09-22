@@ -241,7 +241,7 @@
     // the install/Configure iframe and its in-flight work. When a refresh comes due
     // with a dialog open, keep re-checking and reload only once it is closed.
     (function () {
-      var REFRESH_MS = 60 * 1000;
+      var REFRESH_MS = 900 * 1000;
       if (!(REFRESH_MS > 0)) return;
       function tick() {
         if (lvciModalOpen()) { setTimeout(tick, 5000); return; }
@@ -2092,7 +2092,7 @@
   </script>
   <main class="lvci-main">
   <h1>CI Dashboard — niflexlogger-plugins</h1>
-  <div class="sub">Last updated: 2026-09-22 04:42 UTC &nbsp;|&nbsp; Live — refreshing every 60 s while CI runs</div>
+  <div class="sub">Last updated: 2026-09-22 09:46 UTC &nbsp;|&nbsp; Auto-refreshes every 15 min</div>
   <div class="nav">
     <a href="https://github.com/MIpetrov-NI/niflexlogger-plugins">GitHub</a>
     <a href="https://github.com/MIpetrov-NI/niflexlogger-plugins/actions">Actions</a>
@@ -2574,7 +2574,7 @@
       <td style="text-align:center" class="cidash-cap-cell" data-cap="snapshots" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-ts="" data-done="true"><span class="cidash-chip cc-info" title="Snapshots rendered for all 404 VIs in this revision"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/vi-snapshots/index.html?sha=842f11f57319d2b99d2cb932253b22693ea38582" style="color:inherit">404</a></span></td>
       <td style="text-align:center" class="cidash-cap-cell" data-cap="unit-tests" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-ts="2026-09-21T23:11:07Z"><span class="cidash-chip cc-pass" title="No unit tests found; 0% failed."><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L1.22 9.28a.75.75 0 1 1 1.06-1.06L6 11.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/report/index.html?type=unit-tests-report&sha=842f11f57319d2b99d2cb932253b22693ea38582&short=842f11f&src=..%2Funit-tests%2F842f11f57319d2b99d2cb932253b22693ea38582%2Findex.html&title=Unit%20Tests%20%C2%B7%20842f11f" style="color:inherit">0% failed</a></span></td>
       <td style="text-align:center;color:var(--fg-muted);font-size:.75em">—</td>
-      <td style="text-align:center" class="cidash-active-cell" data-cap="builds" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-active="true"><span class="run-badge" title="Running — click to view progress"><a href="https://github.com/MIpetrov-NI/niflexlogger-plugins/actions/runs/35665048885" style="color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:5px"><span class="run-spin"></span>build</a></span></td>
+      <td style="text-align:center" class="cidash-cap-cell" data-cap="builds" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-ts="2026-09-21T23:16:06Z"><span class="cidash-chip cc-split" title="10 built, 7 failed of 17 build specification(s)"><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/report/index.html?type=builds-report&sha=842f11f57319d2b99d2cb932253b22693ea38582&short=842f11f&src=..%2Fbuilds%2F842f11f57319d2b99d2cb932253b22693ea38582%2Findex.html&title=Builds%20%C2%B7%20842f11f" style="color:inherit"><span class="cidash-vseg cc-pass" data-tip="Succeeded">10</span><span class="cidash-vseg-sep">/</span><span class="cidash-vseg cc-fail" data-tip="Failed">7</span></a></span></td>
       <td style="text-align:center" class="cidash-cap-cell" data-cap="sbom-generation" data-sha="842f11f57319d2b99d2cb932253b22693ea38582" data-parent="cedd13d18d390b5ecd464a6dc19db262d3e9eec6" data-short="842f11f" data-ts="2026-09-21T23:12:23Z"><span class="cidash-chip cc-pass"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L1.22 9.28a.75.75 0 1 1 1.06-1.06L6 11.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg><a href="https://MIpetrov-NI.github.io/niflexlogger-plugins/report/index.html?type=sbom-report&sha=842f11f57319d2b99d2cb932253b22693ea38582&short=842f11f&src=..%2Fsbom%2F842f11f57319d2b99d2cb932253b22693ea38582%2Findex.html&title=SBOM%20%C2%B7%20842f11f" style="color:inherit">SBOM</a></span></td>
     </tr>
 
