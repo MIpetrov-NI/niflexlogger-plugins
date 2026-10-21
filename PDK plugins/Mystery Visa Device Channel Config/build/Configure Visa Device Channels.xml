@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProcessingElement>
+  <Type>02F30F83-D624-40A7-AD6D-97A612F56AB8</Type>
+  <Name>Configure Visa Device Channels</Name>
+  <TemplateType>Plugin</TemplateType>
+  <DevelopmentKitVersion>26.5</DevelopmentKitVersion>
+  <Version>0.1</Version>
+  <OldestCompatibleVersion>0.1</OldestCompatibleVersion>
+  <AliasBase>ConfigureVisaDeviceChannels</AliasBase>
+  <Icon>mixed</Icon>
+  <Description></Description>
+  <VIExec>niPluginWrapper</VIExec>  
+</ProcessingElement>
